@@ -1,0 +1,9 @@
+Models/Airport/hanger-60mx45m-white.ac	 60x45	center
+Models/Airport/hangar3.ac		 24x16	center
+Models/Airport/kmtn-modular-hangar.ac	 15x10	center
+Models/Airport/MultiFlightLeeds.xml	124x54	center
+Models/Airport/thangar.ac		100x13	center
+Models/Airport/thangar2.ac		 66x13	center
+
+
+Models/Military/RAFNissenHut.xml	  6x12
