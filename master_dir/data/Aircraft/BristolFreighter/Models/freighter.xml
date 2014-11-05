@@ -170,6 +170,37 @@
       <z2-m>  3.815 </z2-m>
     </axis>
   </animation>
+  
+  <!-- Nose doors -->
+  <animation>
+    <type>rotate</type>
+    <object-name>noseDoorL</object-name>
+    <property>instrumentation/doors/noseDoors/position-norm</property>
+    <factor>-90</factor>
+    <axis>
+      <x1-m> -8.010 </x1-m>
+      <y1-m> -1.331 </y1-m>
+      <z1-m>  3.250 </z1-m>
+      <x2-m> -8.010 </x2-m>
+      <y2-m> -1.331 </y2-m>
+      <z2-m>  1.430 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>noseDoorR</object-name>
+    <property>instrumentation/doors/noseDoors/position-norm</property>
+    <factor>90</factor>
+    <axis>
+      <x1-m> -8.010 </x1-m>
+      <y1-m>  1.331 </y1-m>
+      <z1-m>  3.250 </z1-m>
+      <x2-m> -8.010 </x2-m>
+      <y2-m>  1.331 </y2-m>
+      <z2-m>  1.430 </z2-m>
+    </axis>
+  </animation>  
 
 </PropertyList>
 

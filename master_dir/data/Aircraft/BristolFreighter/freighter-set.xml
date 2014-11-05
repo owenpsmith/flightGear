@@ -43,8 +43,7 @@ November 2012    osmith    Created by Owen Smith    owenpsmith@shaw.ca
       <setting>0.83</setting>
       <setting>1.00</setting>
     </flaps>
-    
-    
+        
     <view n="103">
       <name>Cockpit View</name>
       <type>lookfrom</type>
@@ -60,9 +59,29 @@ November 2012    osmith    Created by Owen Smith    owenpsmith@shaw.ca
         <default-field-of-view-deg type="double"> 55 </default-field-of-view-deg>
       </config>
     </view>
-    
-    
+        
   </sim>
+  
+  <input>
+    <keyboard>
+    
+      <key n="100">
+        <name>d</name>
+        <desc>Toggle Nose Doors</desc>
+        <binding>
+          <command>nasal</command>
+          <script>BristolFreighter.doorSystem.toggleNoseDoors()</script>
+        </binding>
+      </key>
+      
+    </keyboard>
+  </input>
+          
+  <nasal>
+    <BristolFreighter>
+      <file>Aircraft/BristolFreighter/Nasal/doors.nas</file>
+    </BristolFreighter>
+  </nasal>
 
 </PropertyList>
 
