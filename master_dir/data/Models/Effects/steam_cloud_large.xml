@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <animation>
+	  <type>range</type>
+	  <min-m>0</min-m>
+	  <max-m>20000</max-m>
+    </animation>
+
+
+<particlesystem>
+  <name>steam</name>
+  
+  <texture>steam_cloud_large.png</texture>
+  <emissive>false</emissive>
+  <lighting>true</lighting>
+       
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+  </offsets>
+           
+  <attach>local</attach>
+           
+  <placer>
+    <type>point</type>
+  </placer>
+           
+  <shooter>
+    <speed-mps>
+    	<value>3</value>
+	    <spread>10</spread>
+    </speed-mps>
+    <theta-min-deg>0</theta-min-deg>
+    <theta-max-deg>50</theta-max-deg>
+    <phi-min-deg>0</phi-min-deg>
+    <phi-max-deg>50</phi-max-deg>
+  </shooter>
+       
+  <counter>
+    <particles-per-sec>
+      <value>2</value>
+      <spread>2</spread>
+    </particles-per-sec>
+  </counter>
+           
+  <align>billboard</align>
+           
+  <particle>
+
+  <start>
+    <color>
+      <red><value>1.0</value></red>
+      <green><value>1.0</value></green>
+      <blue><value>1.0</value></blue>
+      <alpha><value>1.0</value></alpha>
+    </color>
+    <size>
+      <value>5</value>
+      <spread>100</spread>
+    </size>
+  </start>
+
+  <end>
+    <color>
+      <red><value>1.0</value></red>
+      <green><value>1.0</value></green>
+      <blue><value>1.0</value></blue>
+      <alpha><value>0.5</value></alpha>
+    </color>
+    <size>
+      <value>100</value>
+      <spread>15</spread>
+    </size>
+  </end>
+    
+  <life-sec>
+    <value>20</value>
+  </life-sec>
+
+  <mass-kg>200</mass-kg>
+  <radius-m>10.0</radius-m>
+  </particle>
+           
+  <program>
+    <fluid>air</fluid>
+    <gravity>true</gravity>
+    <wind>true</wind>
+  </program>
+           
+</particlesystem>
+
+</PropertyList>
