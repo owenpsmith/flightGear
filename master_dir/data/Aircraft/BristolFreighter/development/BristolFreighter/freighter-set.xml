@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+***************************************************************************************
+Bristol 170 Freighter
+November 2012    osmith    Created by Owen Smith    owenpsmith@shaw.ca
+***************************************************************************************
+-->
+
+
+<PropertyList>
+
+  <sim>
+
+    <description>Bristol 170 Freighter</description>
+    <author>Owen Smith</author>
+    <aircraft-version>0.1</aircraft-version>
+    
+    <status>alpha</status>
+    <rating>
+      <FDM     type="int"> 0 </FDM>
+      <systems type="int"> 0 </systems>
+      <cockpit type="int"> 0 </cockpit>
+      <model   type="int"> 2 </model>
+    </rating>
+    
+    <flight-model>yasim</flight-model>
+    <aero>freighter-yasim</aero>
+    
+	<startup>
+      <splash-texture>Aircraft/BristolFreighter/freighter-splash.png</splash-texture>
+      <splash-title>Bristol 170 Freighter</splash-title>
+    </startup>
+	
+    <model>
+      <path>Aircraft/BristolFreighter/Models/freighter.xml</path>
+    </model>
+    
+    <flaps>
+      <setting>0.00</setting>
+      <setting>0.17</setting>
+      <setting>0.33</setting>
+      <setting>0.50</setting>
+      <setting>0.67</setting>
+      <setting>0.83</setting>
+      <setting>1.00</setting>
+    </flaps>
+        
+    <view n="103">
+      <name>Cockpit View</name>
+      <type>lookfrom</type>
+      <internal archive="y">true</internal>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+        <x-offset-m archive="y"> -0.423 </x-offset-m> <!--Right-->
+        <y-offset-m archive="y">  4.781 </y-offset-m> <!--Up-->
+        <z-offset-m archive="y"> -7.933 </z-offset-m> <!--Back-->
+        <pitch-offset-deg> -15 </pitch-offset-deg>
+        <default-field-of-view-deg type="double"> 55 </default-field-of-view-deg>
+      </config>
+    </view>
+        
+  </sim>
+  
+  <input>
+    <keyboard>
+    
+      <key n="100">
+        <name>d</name>
+        <desc>Toggle Nose Doors</desc>
+        <binding>
+          <command>nasal</command>
+          <script>BristolFreighter.doorSystem.toggleNoseDoors()</script>
+        </binding>
+      </key>
+      
+    </keyboard>
+  </input>
+          
+  <nasal>
+    <BristolFreighter>
+      <file>Aircraft/BristolFreighter/Nasal/doors.nas</file>
+    </BristolFreighter>
+  </nasal>
+
+</PropertyList>
+
