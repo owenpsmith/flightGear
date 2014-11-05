@@ -1,0 +1,4 @@
+Things to ask Paul or investigate
+
+- flap travel duration
+- nose door duration
