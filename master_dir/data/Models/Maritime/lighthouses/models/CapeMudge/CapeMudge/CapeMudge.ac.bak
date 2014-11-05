@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
+MATERIAL "0053_Ivory" rgb 1 1 0.9412  amb 0.4 0.4 0.4  emis 0.1 0.1 0.1  spec 0.2 0.2 0.2  shi 128  trans 0
 MATERIAL "Stand" rgb 1 1 1  amb 0.4 0.4 0.4  emis 1 1 1  spec 0.2 0.2 0.2  shi 128  trans 0
 OBJECT world
 kids 2
@@ -79,7 +79,7 @@ refs 3
 6 0.2262 24.3128
 kids 0
 OBJECT poly
-name "disk"
+name "tower"
 crease 45.000000
 numvert 74
 1.7422 9.75 -0.721642
@@ -156,7 +156,18 @@ numvert 74
 -0.721643 9.81 -1.7422
 0.721643 9.81 -1.7422
 1.7422 9.81 -0.721642
-numsurf 72
+numsurf 73
+SURF 0x30
+mat 0
+refs 8
+73 0.830407 0.830407
+66 0.967266 0.5
+67 0.830407 0.169593
+68 0.5 0.0327344
+69 0.169593 0.169593
+70 0.0327344 0.5
+71 0.169593 0.830407
+72 0.5 0.967266
 SURF 0x30
 mat 0
 refs 3
