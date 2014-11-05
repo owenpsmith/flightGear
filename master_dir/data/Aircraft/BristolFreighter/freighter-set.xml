@@ -27,9 +27,11 @@ November 2012    osmith    Created by Owen Smith    owenpsmith@shaw.ca
     <flight-model>yasim</flight-model>
     <aero>freighter-yasim</aero>
     
-    <splash-texture>Aircraft/BristolFreighter/freighter-splash.png</splash-texture>
-    <splash-title>Bristol 170 Freighter</splash-title>
-    
+	<startup>
+      <splash-texture>Aircraft/BristolFreighter/freighter-splash.png</splash-texture>
+      <splash-title>Bristol 170 Freighter</splash-title>
+    </startup>
+	
     <model>
       <path>Aircraft/BristolFreighter/Models/freighter.xml</path>
     </model>
