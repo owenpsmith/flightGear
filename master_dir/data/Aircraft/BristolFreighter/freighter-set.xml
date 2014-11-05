@@ -34,6 +34,17 @@ November 2012    osmith    Created by Owen Smith    owenpsmith@shaw.ca
       <path>Aircraft/BristolFreighter/Models/freighter.xml</path>
     </model>
     
+    <flaps>
+      <setting>0.00</setting>
+      <setting>0.17</setting>
+      <setting>0.33</setting>
+      <setting>0.50</setting>
+      <setting>0.67</setting>
+      <setting>0.83</setting>
+      <setting>1.00</setting>
+    </flaps>
+    
+    
     <view n="103">
       <name>Cockpit View</name>
       <type>lookfrom</type>
