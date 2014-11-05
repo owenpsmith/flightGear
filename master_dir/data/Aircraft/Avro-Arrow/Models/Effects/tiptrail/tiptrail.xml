@@ -14,7 +14,7 @@
       <and>
         <greater-than>
           <property>/environment/relative-humidity</property>
-          <value>98</value>
+          <value>20</value>
         </greater-than>
         <greater-than>
           <property>/environment/temperature-degc</property>
@@ -78,10 +78,14 @@
           <red><value>   1.0 </value></red>
           <green><value> 1.0 </value></green>
           <blue><value>  1.0 </value></blue>
-          <alpha><value> 0.1 </value></alpha>
+          <alpha>          
+            <property>/accelerations/pilot/z-accel-fps_sec</property>
+            <factor>-0.0015</factor>
+          </alpha>
         </color>
         <size>
-          <value>0.10</value>
+          <property>/accelerations/pilot/z-accel-fps_sec</property>
+          <factor>-0.0003</factor>
         </size>
       </start>
 
@@ -90,10 +94,14 @@
          <red><value>   1.00 </value></red>
          <green><value> 1.00 </value></green>
          <blue><value>  1.00 </value></blue>
-         <alpha><value> 0.08 </value></alpha>
+         <alpha>          
+           <property>/accelerations/pilot/z-accel-fps_sec</property>
+           <factor>-0.00015</factor>
+         </alpha>
        </color>
        <size>
-         <value>1.0</value>
+          <property>/accelerations/pilot/z-accel-fps_sec</property>
+          <factor>-0.0009</factor>
        </size>
       </end>
 
@@ -105,11 +113,6 @@
       <radius-m>0.1</radius-m>
     </particle>
 
-    <program>
-      <fluid>   air  </fluid>
-      <gravity> true </gravity>
-      <wind>    true </wind>
-    </program>
 
   </particlesystem>
 
