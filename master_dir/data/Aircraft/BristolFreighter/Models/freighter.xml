@@ -4,12 +4,172 @@
 
   <model>
     <path>Aircraft/BristolFreighter/Models/freighter.ac</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
+
+  <!-- Rudder -->
+  <animation>
+    <type>rotate</type>
+    <object-name>rudder</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>-28</factor>
+    <axis>
+      <x1-m>8.716</x1-m>
+      <y1-m>0.0  </y1-m>
+      <z1-m>7.826</z1-m>
+      <x2-m>8.753</x2-m>
+      <y2-m>0.0  </y2-m>
+      <z2-m>5.734</z2-m>
+    </axis>
+  </animation>
+
+  <!-- Elevator -->
+  <animation>
+    <type>rotate</type>
+    <object-name>elevator</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 27.0</dep>
+      </entry>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-17.0</dep>
+      </entry>
+    </interpolation>    
+    <center>
+      <x-m> 9.140 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 3.154 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Ailerons -->
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronL</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 19.0</dep>
+      </entry>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-15.0</dep>
+      </entry>
+    </interpolation>    
+    <axis>
+      <x1-m>  -0.832 </x1-m>
+      <y1-m> -13.860 </y1-m>
+      <z1-m>   4.224 </z1-m>
+      <x2-m>  -0.832 </x2-m>
+      <y2-m>  -8.457 </y2-m>
+      <z2-m>   4.019 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronR</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 19.0</dep>
+      </entry>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-15.0</dep>
+      </entry>
+    </interpolation>    
+    <axis>
+      <x1-m> -0.832 </x1-m>
+      <y1-m>  8.457 </y1-m>
+      <z1-m>  4.019 </z1-m>
+      <x2-m> -0.832 </x2-m>
+      <y2-m> 13.860 </y2-m>
+      <z2-m>  4.224 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Flaps -->
+  <animation>
+    <type>rotate</type>
+    <object-name>flapOuterL</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>60</factor>
+    <axis>
+      <x1-m> -1.100 </x1-m>
+      <y1-m> -8.337 </y1-m>
+      <z1-m>  3.815 </z1-m>
+      <x2-m> -1.100 </x2-m>
+      <y2-m> -4.704 </y2-m>
+      <z2-m>  3.652 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flapInnerL</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>60</factor>
+    <axis>
+      <x1-m> -1.108 </x1-m>
+      <y1-m> -4.566 </y1-m>
+      <z1-m>  3.650 </z1-m>
+      <x2-m> -1.108 </x2-m>
+      <y2-m> -1.393 </y2-m>
+      <z2-m>  3.650 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flapInnerR</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>60</factor>
+    <axis>
+      <x1-m> -1.108 </x1-m>
+      <y1-m>  1.393 </y1-m>
+      <z1-m>  3.650 </z1-m>
+      <x2-m> -1.108 </x2-m>
+      <y2-m>  4.566 </y2-m>
+      <z2-m>  3.650 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flapOuterR</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>60</factor>
+    <axis>
+      <x1-m> -1.100 </x1-m>
+      <y1-m>  4.704 </y1-m>
+      <z1-m>  3.652 </z1-m>
+      <x2-m> -1.100 </x2-m>
+      <y2-m>  8.337 </y2-m>
+      <z2-m>  3.815 </z2-m>
+    </axis>
+  </animation>
 
 </PropertyList>
 

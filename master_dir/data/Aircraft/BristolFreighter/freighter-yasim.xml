@@ -198,7 +198,7 @@
 
 
   <!-- Left main -->
-  <gear x="4.830" y="4.268" z="0.082"
+  <gear x="4.830" y="4.268" z="0.04"
         compression="0.30"
         spring="0.7"
         damp="1.0"
@@ -209,7 +209,7 @@
   </gear>
 
   <!-- Right main -->
-  <gear x="4.830" y="-4.268" z="0.082"
+  <gear x="4.830" y="-4.268" z="0.04"
         compression="0.30"
         spring="0.7"
         damp="1.0"
@@ -220,7 +220,7 @@
   </gear>
 
   <!-- Tail wheel -->
-  <gear x="-9.412" y="0.000" z="1.644"
+  <gear x="-9.412" y="0.000" z="1.624"
         compression="0.2"
         spring="0.7"
         damp="1.0"
