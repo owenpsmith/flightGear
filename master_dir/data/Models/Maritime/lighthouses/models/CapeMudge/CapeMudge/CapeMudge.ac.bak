@@ -6,7 +6,7 @@ MATERIAL "Stand" rgb 1 1 1  amb 0.4 0.4 0.4  emis 1 1 1  spec 0.2 0.2 0.2  shi 1
 OBJECT world
 kids 4
 OBJECT poly
-name "Head"
+name "lightBeam"
 loc 0 -8.49 0
 texture "CapeMudge_Stand.png"
 crease 45.000000
