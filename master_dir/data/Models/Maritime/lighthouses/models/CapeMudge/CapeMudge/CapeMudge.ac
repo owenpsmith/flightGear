@@ -173,7 +173,7 @@ kids 0
 OBJECT poly
 name "lightBeam"
 loc 0 -8.49 0
-texture "CapeMudge_Stand.png"
+texture "CapeMudge_Light.png"
 crease 45.000000
 numvert 8
 -0.482956 23.3728 -0.012678
