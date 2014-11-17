@@ -85,7 +85,7 @@ kids 0
 OBJECT poly
 name "island1"
 loc -77.1224 0 26.1575
-texture "islands.png"
+texture "terrain.png"
 crease 180.000000
 numvert 170
 99.415 4.34948 -3.5
