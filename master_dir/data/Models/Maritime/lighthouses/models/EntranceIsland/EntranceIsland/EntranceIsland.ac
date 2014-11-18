@@ -2357,7 +2357,7 @@ refs 3
 kids 0
 OBJECT group
 name "house1"
-loc 12.3325 0.126541 -13.842
+loc 12.3325 6.23479 -13.842
 kids 4
 OBJECT poly
 name "house1b_roof"
@@ -2519,7 +2519,7 @@ refs 4
 kids 0
 OBJECT group
 name "house2"
-loc -8.95583 0.281449 -7.86935
+loc -8.95583 6.87327 -7.86935
 kids 2
 OBJECT poly
 name "house2"
