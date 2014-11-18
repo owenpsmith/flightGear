@@ -7,41 +7,7 @@ MATERIAL "ac3dmat3" rgb 0.882353 0.101961 0.101961  amb 0.2 0.2 0.2  emis 0 0 0 
 MATERIAL "0053_Ivory" rgb 1 1 0.9412  amb 0.4 0.4 0.4  emis 0.1 0.1 0.1  spec 0.2 0.2 0.2  shi 128  trans 0
 MATERIAL "Stand" rgb 1 1 1  amb 0.4 0.4 0.4  emis 1 1 1  spec 0.2 0.2 0.2  shi 128  trans 0
 OBJECT world
-kids 11
-OBJECT poly
-name "house3_roof_c"
-loc 9.19296 0.281449 55.4622
-texture "roof.png"
-crease 45.000000
-numvert 3
-2.14864 2.61545 0
--0.454664 1.45763 -2.58771
--0.454664 1.45763 2.58771
-numsurf 1
-SURF 0x30
-mat 4
-refs 3
-0 0.312167 0.471229
-1 0.0621663 0.0182155
-2 0.562166 0.0182154
-kids 0
-OBJECT poly
-name "house3_roof_d"
-loc 9.19296 0.281449 55.4622
-texture "roof.png"
-crease 45.000000
-numvert 3
-11.4376 1.45763 2.58771
-11.4376 1.45763 -2.58771
-8.83425 2.61545 -3.8147e-006
-numsurf 1
-SURF 0x30
-mat 4
-refs 3
-0 0.130605 0.0147355
-1 0.630605 0.0147354
-2 0.380605 0.467749
-kids 0
+kids 9
 OBJECT poly
 name "lightBeam"
 loc 0 -8.49 1.65
@@ -7300,9 +7266,47 @@ refs 12
 137 0 0
 138 0 0
 kids 0
+OBJECT group
+name "house3"
+loc 10.5658 0.790584 55.4622
+kids 4
+OBJECT poly
+name "house3_roof_c"
+loc -1.37286 -0.509135 3.8147e-006
+texture "roof.png"
+crease 45.000000
+numvert 3
+2.14864 2.61545 0
+-0.454664 1.45763 -2.58771
+-0.454664 1.45763 2.58771
+numsurf 1
+SURF 0x30
+mat 4
+refs 3
+0 0.312167 0.471229
+1 0.0621663 0.0182155
+2 0.562166 0.0182154
+kids 0
+OBJECT poly
+name "house3_roof_d"
+loc -1.37286 -0.509135 3.8147e-006
+texture "roof.png"
+crease 45.000000
+numvert 3
+11.4376 1.45763 2.58771
+11.4376 1.45763 -2.58771
+8.83425 2.61545 -3.8147e-006
+numsurf 1
+SURF 0x30
+mat 4
+refs 3
+0 0.130605 0.0147355
+1 0.630605 0.0147354
+2 0.380605 0.467749
+kids 0
 OBJECT poly
 name "house3"
-loc 9.19296 0.281449 55.4622
+loc -1.37286 -0.509135 3.8147e-006
 crease 45.000000
 numvert 8
 11.0916 -1.98935 -2.25121
@@ -7345,7 +7349,7 @@ refs 4
 kids 0
 OBJECT poly
 name "house3_roof_b"
-loc 14.6844 2.31799 55.4622
+loc 4.11859 1.52741 0
 texture "roof.png"
 crease 45.000000
 numvert 8
@@ -7372,4 +7376,70 @@ refs 4
 6 0.218908 0.492266
 5 0 0.0570728
 4 1 0.0570728
+kids 0
+OBJECT group
+name "house4"
+loc 11.4064 1.29972 74.0158
+kids 2
+OBJECT poly
+name "house4"
+loc -2.13785 -1.01827 7.62939e-006
+crease 45.000000
+numvert 8
+8.63601 1.55053 -2.25121
+8.63601 1.55053 2.25121
+-0.0846062 1.55053 2.25121
+-0.0846062 1.55053 -2.25121
+-0.0846062 -1.98935 -2.25121
+-0.0846062 -1.98935 2.25121
+8.63601 -1.98935 2.25121
+8.63601 -1.98935 -2.25121
+numsurf 4
+SURF 0x10
+mat 1
+refs 4
+3 0 0
+4 1 0
+5 1 1
+2 0 1
+SURF 0x10
+mat 1
+refs 4
+1 0 0
+6 1 0
+7 1 1
+0 0 1
+SURF 0x10
+mat 1
+refs 4
+0 0 0
+7 1 0
+4 1 1
+3 0 1
+SURF 0x10
+mat 1
+refs 4
+2 0 0
+5 1 0
+6 1 1
+1 0 1
+kids 0
+OBJECT poly
+name "house4_roof"
+loc 2.13785 1.01827 0
+texture "roof.png"
+crease 45.000000
+numvert 4
+-4.62971 -0.469364 2.58772
+4.62971 -0.469364 2.58772
+4.62971 -0.469364 -2.58771
+-4.62971 -0.469364 -2.58771
+numsurf 1
+SURF 0x30
+mat 4
+refs 4
+2 0.67102 0.460938
+3 0 0.460938
+0 0 0.0129405
+1 0.67102 0.0129405
 kids 0
