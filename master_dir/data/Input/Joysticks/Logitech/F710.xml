@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name type="string">Controller (Wireless Gamepad F710)</name>
+
+<nasal>
+    <script><![CDATA[
+        var gearState = 0;
+    ]]></script>
+</nasal>
+
+
+  <axis n="0">
+    <desc type="string">View pan horizontally</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/sim/current-view/goal-heading-offset-deg</property>
+      <dead-band type="double">0</dead-band>
+      <factor type="double">-180</factor>
+      <offset type="double">0</offset>
+      <power type="int">3</power>
+  </binding>
+  </axis>
+  <axis n="1">
+    <desc type="string">View pan vertically</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/sim/current-view/goal-pitch-offset-deg</property>
+      <dead-band type="double">0</dead-band>
+      <factor type="double">90</factor>
+      <offset type="double">0</offset>
+      <power type="int">3</power>
+    </binding>
+  </axis>
+  <axis n="2">
+    <desc type="string">Rudder</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/flight/rudder</property>
+      <dead-band type="double">0</dead-band>
+      <factor type="double">-1</factor>
+      <offset type="double">0</offset>
+      <power type="int">2</power>
+    </binding>
+  </axis>
+  <axis n="3">
+    <desc type="string">Elevator</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/flight/elevator</property>
+      <dead-band type="double">0</dead-band>
+      <factor type="double">-1</factor>
+      <offset type="double">0</offset>
+      <power type="int">2</power>
+    </binding>
+  </axis>
+  <axis n="4">
+    <desc type="string">Aileron</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/flight/aileron</property>
+      <dead-band type="double">0</dead-band>
+      <factor type="double">1</factor>
+      <offset type="double">0</offset>
+      <power type="int">2</power>
+    </binding>
+  </axis>
+
+    <button n="0">
+        <desc>Decrease throttle</desc>
+        <repeatable>true</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>controls.incThrottle(-0.01, -1.0)</script>
+        </binding>
+     </button>
+
+    <button n="1">
+        <desc>Flaps Down</desc>
+        <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>controls.flapsDown(1);</script>
+        </binding>
+        <mod-up>
+            <binding>
+                <command>nasal</command>
+                <script>controls.flapsDown(0);</script>
+            </binding>
+        </mod-up>
+    </button>
+
+    <button n="2">
+        <desc>Flaps Up</desc>
+        <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>controls.flapsDown(-1);</script>
+        </binding>
+        <mod-up>
+            <binding>
+                <command>nasal</command>
+                <script>controls.flapsDown(0);</script>
+            </binding>
+        </mod-up>
+    </button>
+
+    <button n="3">
+        <desc>Increase throttle</desc>
+        <repeatable>true</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>controls.incThrottle(0.01, 1.0)</script>
+        </binding>
+    </button>
+
+    <button n="5">
+        <desc>Toggle gear when airborne, apply brakes when on ground</desc>
+        <binding>
+            <command>nasal</command>
+            <script>
+                <![CDATA[ 
+                    if (getprop("/position/gear-agl-ft") > 10.0)
+                    {
+                        if (getprop("/controls/gear/gear-down"))
+                        {
+                            gui.popupTip(sprintf("Raising gear 1"), 3);
+                        } else {
+                            gui.popupTip(sprintf("Lowering gear 1"), 3);
+                        }
+                        controls.gearToggle();
+                    }
+                    else
+                    {
+                        if (getprop("/gear/gear/ground-is-solid"))
+                        {
+                            controls.applyBrakes(1);
+                        }
+                        else
+                        {
+                            if (getprop("/sim/aircraft") == "dhc2F")
+                            {
+                                if (gearState == 0)
+                                {
+                                    gui.popupTip(sprintf("Lowering water rudders"), 3);
+                                    setprop("/controls/gear/water-rudder", 1);
+                                    gearState = 1;
+                                }
+                                else if (gearState == 1)
+                                {
+                                    gui.popupTip(sprintf("Lowering gear"), 3);
+                                    setprop("/controls/gear/gear-down", 1);
+                                    gearState = 2;
+                                }
+                                else if (gearState == 2)
+                                {
+                                    gui.popupTip(sprintf("Raising gear"), 3);
+                                    setprop("/controls/gear/gear-down", 0);
+                                    gearState = 3;
+                                }
+                                else if (gearState == 3)
+                                {
+                                    gui.popupTip(sprintf("Raising water rudders"), 3);
+                                    setprop("/controls/gear/water-rudder", 0);
+                                    gearState = 0;
+                                }
+                            }
+                            else
+                            {
+                                if (getprop("/controls/gear/gear-down"))
+                                {
+                                    gui.popupTip(sprintf("Raising gear 2"), 3);
+                                }
+                                else
+                                {
+                                    gui.popupTip(sprintf("Lowering gear 2"), 3);
+                                }
+                                controls.gearToggle();
+                            }
+                        }
+                    }
+                ]]>
+            </script>
+        </binding>
+        <mod-up>
+            <binding>
+                <command>nasal</command>
+                <script>
+                    <![CDATA[ 
+                        if (getprop("/position/gear-agl-ft") < 1.0)
+                        {
+                            if (getprop("/gear/gear/ground-is-solid"))
+                            {
+                                controls.applyBrakes(0);
+                            }
+                        }
+                    ]]>
+                </script>
+            </binding>
+        </mod-up>
+        <double-click>
+            <time type="double">0.3</time>
+            <binding>
+                <command>nasal</command>
+                <script>
+                    <![CDATA[ 
+                        if ((getprop("/gear/gear/ground-is-solid") and 
+                            (getprop("/position/gear-agl-ft") < 1.0))
+                        {
+                            brake = !getprop("/controls/gear/brake-parking");
+                            setprop("/controls/gear/brake-parking", brake);
+                            if (brake)
+                            {
+                                gui.popupTip(sprintf("Parking Brake ON"), 3);
+                            } 
+                            else 
+                            {
+                                gui.popupTip(sprintf("Parking Brake OFF"), 3);
+                            }
+                        }
+                    ]]>
+                </script>
+            </binding>
+        </double-click>
+    </button>
+
+    <button n="6">
+        <desc>View Cycle Forwards</desc>
+        <binding>
+            <command>nasal</command>
+            <script>view.stepView(1);</script>
+        </binding>
+        <repeatable>false</repeatable>
+    </button>
+  
+  <!--rocker - lateral axis-->
+   <axis n="6">
+       <desc>View Direction</desc>
+      <direction>left</direction>
+      <low>
+        <repeatable>true</repeatable>
+        <binding>
+          <command>nasal</command>
+          <script>view.panViewDir(1)</script>
+        </binding>
+      </low>
+      <high>
+        <repeatable>true</repeatable>
+        <binding>
+          <command>nasal</command>
+          <script>view.panViewDir(-1)</script>
+        </binding>
+      </high>
+   </axis>
+  
+  <!--rocker - vertical axis-->
+   <axis n="7">
+       <desc>View Direction</desc>
+      <direction>upward</direction>
+      <low>
+        <repeatable>true</repeatable>
+        <binding>
+          <command>nasal</command>
+          <script>view.panViewPitch(1)</script>
+        </binding>
+      </low>
+      <high>
+        <repeatable>true</repeatable>
+        <binding>
+          <command>nasal</command>
+          <script>view.panViewPitch(-1)</script>
+        </binding>
+      </high>
+   </axis>
+  
+
+</PropertyList>
