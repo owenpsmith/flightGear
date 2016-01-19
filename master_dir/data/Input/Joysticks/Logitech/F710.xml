@@ -21,6 +21,7 @@
       <power type="int">3</power>
   </binding>
   </axis>
+  
   <axis n="1">
     <desc type="string">View pan vertically</desc>
     <binding>
@@ -32,6 +33,7 @@
       <power type="int">3</power>
     </binding>
   </axis>
+  
   <axis n="2">
     <desc type="string">Rudder</desc>
     <binding>
@@ -43,6 +45,7 @@
       <power type="int">2</power>
     </binding>
   </axis>
+  
   <axis n="3">
     <desc type="string">Elevator</desc>
     <binding>
@@ -54,6 +57,7 @@
       <power type="int">2</power>
     </binding>
   </axis>
+  
   <axis n="4">
     <desc type="string">Aileron</desc>
     <binding>
@@ -71,7 +75,7 @@
         <repeatable>true</repeatable>
         <binding>
             <command>nasal</command>
-            <script>controls.incThrottle(-0.01, -1.0)</script>
+            <script>controls.incThrottle(-0.005, -1.0)</script>
         </binding>
      </button>
 
@@ -110,12 +114,13 @@
         <repeatable>true</repeatable>
         <binding>
             <command>nasal</command>
-            <script>controls.incThrottle(0.01, 1.0)</script>
+            <script>controls.incThrottle(0.005, 1.0)</script>
         </binding>
     </button>
 
     <button n="5">
         <desc>Toggle gear when airborne, apply brakes when on ground</desc>
+        <repeatable>false</repeatable>
         <binding>
             <command>nasal</command>
             <script>
@@ -124,9 +129,9 @@
                     {
                         if (getprop("/controls/gear/gear-down"))
                         {
-                            gui.popupTip(sprintf("Raising gear 1"), 3);
+                            gui.popupTip(sprintf("Raising gear"), 2);
                         } else {
-                            gui.popupTip(sprintf("Lowering gear 1"), 3);
+                            gui.popupTip(sprintf("Lowering gear"), 2);
                         }
                         controls.gearToggle();
                     }
@@ -135,14 +140,15 @@
                         if (getprop("/gear/gear/ground-is-solid"))
                         {
                             controls.applyBrakes(1);
-                        }
+			    setprop("/controls/gear/brake-parking", 0);
+			}
                         else
                         {
                             if (getprop("/sim/aircraft") == "dhc2F")
                             {
                                 if (gearState == 0)
                                 {
-                                    gui.popupTip(sprintf("Lowering water rudders"), 3);
+                                    gui.popupTip(sprintf("Lowering water rudders"), 2);
                                     setprop("/controls/gear/water-rudder", 1);
                                     gearState = 1;
                                 }
@@ -160,7 +166,7 @@
                                 }
                                 else if (gearState == 3)
                                 {
-                                    gui.popupTip(sprintf("Raising water rudders"), 3);
+                                    gui.popupTip(sprintf("Raising water rudders"), 2);
                                     setprop("/controls/gear/water-rudder", 0);
                                     gearState = 0;
                                 }
@@ -169,11 +175,11 @@
                             {
                                 if (getprop("/controls/gear/gear-down"))
                                 {
-                                    gui.popupTip(sprintf("Raising gear 2"), 3);
+                                    gui.popupTip(sprintf("Raising gear"), 2);
                                 }
                                 else
                                 {
-                                    gui.popupTip(sprintf("Lowering gear 2"), 3);
+                                    gui.popupTip(sprintf("Lowering gear"), 2);
                                 }
                                 controls.gearToggle();
                             }
@@ -203,6 +209,7 @@
             <binding>
                 <command>nasal</command>
                 <script>
+                gui.popupTip(sprintf("Try to toggle parking brake"), 2);
                     <![CDATA[ 
                         if ((getprop("/gear/gear/ground-is-solid") and 
                             (getprop("/position/gear-agl-ft") < 1.0))
@@ -211,11 +218,11 @@
                             setprop("/controls/gear/brake-parking", brake);
                             if (brake)
                             {
-                                gui.popupTip(sprintf("Parking Brake ON"), 3);
+                                gui.popupTip(sprintf("Parking Brake ON"), 2);
                             } 
                             else 
                             {
-                                gui.popupTip(sprintf("Parking Brake OFF"), 3);
+                                gui.popupTip(sprintf("Parking Brake OFF"), 2);
                             }
                         }
                     ]]>
@@ -240,15 +247,17 @@
       <low>
         <repeatable>true</repeatable>
         <binding>
-          <command>nasal</command>
-          <script>view.panViewDir(1)</script>
+   	   <command>property-adjust</command>
+   	   <property>/controls/flight/aileron-trim</property>
+   	   <step type="double">-0.001</step>
         </binding>
       </low>
       <high>
         <repeatable>true</repeatable>
         <binding>
-          <command>nasal</command>
-          <script>view.panViewDir(-1)</script>
+   	   <command>property-adjust</command>
+   	   <property>/controls/flight/aileron-trim</property>
+   	   <step type="double">0.001</step>
         </binding>
       </high>
    </axis>
@@ -260,15 +269,17 @@
       <low>
         <repeatable>true</repeatable>
         <binding>
-          <command>nasal</command>
-          <script>view.panViewPitch(1)</script>
+   	   <command>property-adjust</command>
+   	   <property>/controls/flight/elevator-trim</property>
+   	   <step type="double">-0.001</step>
         </binding>
       </low>
       <high>
         <repeatable>true</repeatable>
         <binding>
-          <command>nasal</command>
-          <script>view.panViewPitch(-1)</script>
+   	   <command>property-adjust</command>
+   	   <property>/controls/flight/elevator-trim</property>
+   	   <step type="double">0.001</step>
         </binding>
       </high>
    </axis>
