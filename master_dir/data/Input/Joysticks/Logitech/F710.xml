@@ -5,7 +5,8 @@
 
 <nasal>
     <script><![CDATA[
-        var gearState = 0;
+        var gearState   = 0;
+        var engineState = 0;
     ]]></script>
 </nasal>
 
@@ -118,6 +119,119 @@
         </binding>
     </button>
 
+    <button n="4">
+        <desc>sequence through engine startup/shutdown</desc>
+        <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+                <![CDATA[ 
+					if (getprop("/sim/aircraft") == "dhc2F")
+					{
+						if (engineState == 0)
+						{
+							gui.popupTip(sprintf("Fuel ON"), 2);
+							setprop("/controls/gear/water-rudder", 1);
+							engineState = 1;
+						}
+						else if (engineState == 1)
+						{
+							gui.popupTip(sprintf("Mixture RICH"), 3);
+							setprop("/controls/mixture", 1);
+							engineState = 2;
+						}
+						else if (engineState == 2)
+						{
+							gui.popupTip(sprintf("Master ON"), 3);
+							setprop("/controls/gear/gear-down", 0);
+							engineState = 3;
+						}
+						else if (engineState == 3)
+						{
+							gui.popupTip(sprintf("Alternator ON"), 2);
+							setprop("/controls/gear/water-rudder", 0);
+							engineState = 4;
+						}
+						else if (engineState == 4)
+						{
+							gui.popupTip(sprintf("Mags BOTH"), 2);
+							setprop("/controls/magnetos", 3);
+							engineState = 5;
+						}
+						else if (engineState == 5)
+						{
+							gui.popupTip(sprintf("Starting . . . "), 2);
+							controls.startEngine(1);
+						}
+						else if (engineState == 6)
+						{
+							gui.popupTip(sprintf("Mags OFF"), 2);
+							setprop("/controls/magnetos", 0);
+							engineState = 7;
+						}
+						else if (engineState == 7)
+						{
+							gui.popupTip(sprintf("Mags BOTH"), 2);
+							setprop("/controls/magnetos", 3);
+							engineState = 8;
+						}
+						else if (engineState == 8)
+						{
+							gui.popupTip(sprintf("Mixture LEAN"), 2);
+							setprop("/controls/mixture", 0);
+							engineState = 9;
+						}
+						else if (engineState == 9)
+						{
+							gui.popupTip(sprintf("Mags OFF"), 2);
+							setprop("/controls/magnetos", 0);
+							engineState = 10;
+						}
+						else if (engineState == 10)
+						{
+							gui.popupTip(sprintf("Alternator OFF"), 2);
+							setprop("/controls/gear/water-rudder", 0);
+							engineState = 11;
+						}
+						else if (engineState == 11)
+						{
+							gui.popupTip(sprintf("Master OFF"), 2);
+							setprop("/controls/gear/water-rudder", 0);
+							engineState = 12;
+						}
+						else if (engineState == 12)
+						{
+							gui.popupTip(sprintf("Fuel OFF"), 2);
+							setprop("/controls/gear/water-rudder", 0);
+							engineState = 0;
+						}
+					}
+					else
+					{
+						if (getprop("/controls/gear/gear-down"))
+						{
+							gui.popupTip(sprintf("Raising gear"), 2);
+						}
+						else
+						{
+							gui.popupTip(sprintf("Lowering gear"), 2);
+						}
+						controls.gearToggle();
+					}
+                ]]>
+            </script>
+        </binding>
+        <mod-up>
+            <binding>
+                <command>nasal</command>
+                <script>
+                    controls.startEngine(0);
+					engineState = 6;
+                </script>
+            </binding>
+        </button>
+    
+    
     <button n="5">
         <desc>Toggle gear when airborne, apply brakes when on ground</desc>
         <repeatable>false</repeatable>
