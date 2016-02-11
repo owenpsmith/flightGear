@@ -227684,7 +227684,7 @@ kids 0
 OBJECT poly
 name "annex walls"
 loc -65.6252 7.84922 15.7498
-texture "BC_Legislature.rgb"
+texture "BC_Legislature.png"
 crease 45.000000
 numvert 164
 -9.89502 1.96862 0.323138
