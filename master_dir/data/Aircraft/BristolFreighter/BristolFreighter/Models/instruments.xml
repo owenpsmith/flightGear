@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+
+<!--
+Grumman G-21A Goose
+Gary R. Neely 'Buckaroo', July 2009
+-->
+
+
+<PropertyList>
+
+<!-- Special Groups and Shaders -->
+
+<animation>
+  <type>noshadow</type>
+  <object-name>asiL</object-name>
+  <object-name>aiL</object-name>
+  <object-name>altL</object-name>
+  <object-name>tcL</object-name>
+  <object-name>dgL</object-name>
+  <object-name>vsiL</object-name>
+  <object-name>asiR</object-name>
+  <object-name>aiR</object-name>
+  <object-name>altR</object-name>
+  <object-name>tcR</object-name>
+  <object-name>dgR</object-name>
+  <object-name>vsiR</object-name>
+  <object-name>tach1</object-name>
+  <object-name>tach2</object-name>
+</animation>
+
+
+<!-- Pilot Panel -->
+
+<model>
+  <name>asiL</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/asi/asi.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>-0.56</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+<model>
+  <name>aiL</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/ai/ai.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>-0.46</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+<model>
+  <name>altL</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/alt/alt.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>-0.36</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+<model>
+  <name>tcL</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/tc/tc.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>-0.56</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.47</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+<model>
+  <name>hiL</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/hi/hi.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>-0.46</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.47</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+<model>
+  <name>vsiL</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/vsi/VSI.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>-0.36</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.47</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+
+
+<!-- Co-pilot Panel -->
+
+<model>
+  <name>asiR</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/asi/asi.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>0.36</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+<model>
+  <name>aiR</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/ai/ai.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>0.46</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+<model>
+  <name>altR</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/alt/alt.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>0.56</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+<model>
+  <name>tcR</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/tc/tc.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>0.36</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.47</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+<model>
+  <name>hiR</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/hi/hi.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>0.46</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.47</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+<model>
+  <name>vsiR</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/vsi/VSI.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>0.56</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.47</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+
+
+
+<!-- Engine Instruments -->
+
+<model>
+  <name>tach1</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/tach/tach1.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>0.06</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+<model>
+  <name>tach2</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/tach/tach2.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>0.16</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+  </offsets>
+</model>
+
+
+</PropertyList>
+
+

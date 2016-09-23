@@ -106,7 +106,7 @@
          taper="1"
          camber="0.0">
          <stall aoa="18" width="4" peak="1.5"/>
-         <flap0 start="0.05" end="0.95" lift="1.67" drag="1.7"/>
+         <flap0 start="0.05" end="0.95" lift="1.50" drag="1.7"/>
 
          <control-input axis="/controls/flight/elevator" control="FLAP0"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>

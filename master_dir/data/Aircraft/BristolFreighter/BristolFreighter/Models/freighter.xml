@@ -6,6 +6,11 @@
     <path>Aircraft/BristolFreighter/Models/freighter.ac</path>
   </model>
 
+<model>
+  <name>Instruments</name>
+  <path>Aircraft/BristolFreighter/Models/instruments.xml</path>
+</model>
+
   <!-- *** Rudder -->
   <animation>
     <type>rotate</type>

@@ -46,7 +46,7 @@ November 2012    osmith    Created by Owen Smith    owenpsmith@shaw.ca
       <setting>1.00</setting>
     </flaps>
         
-    <view n="103">
+    <view>
       <name>Cockpit View</name>
       <type>lookfrom</type>
       <internal archive="y">true</internal>
@@ -54,11 +54,21 @@ November 2012    osmith    Created by Owen Smith    owenpsmith@shaw.ca
         <from-model type="bool">true</from-model>
         <from-model-idx type="int">0</from-model-idx>
         <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-        <x-offset-m archive="y"> -0.423 </x-offset-m> <!--Right-->
-        <y-offset-m archive="y">  4.781 </y-offset-m> <!--Up-->
-        <z-offset-m archive="y"> -7.933 </z-offset-m> <!--Back-->
+        <x-offset-m archive="y"> -0.250 </x-offset-m> <!--Right-->
+        <y-offset-m archive="y">  4.870 </y-offset-m> <!--Up-->
+        <z-offset-m archive="y"> -7.500 </z-offset-m> <!--Back-->
         <pitch-offset-deg> -15 </pitch-offset-deg>
         <default-field-of-view-deg type="double"> 55 </default-field-of-view-deg>
+      </config>
+    </view>
+        
+    <view>
+      <name>Chase View</name>
+      <type>lookat</type>
+      <config>
+        <target-x-offset-m type="double">0</target-x-offset-m>
+        <target-y-offset-m type="double">3.5</target-y-offset-m>
+        <target-z-offset-m type="double">0</target-z-offset-m>
       </config>
     </view>
         
