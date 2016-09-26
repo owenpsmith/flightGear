@@ -1,11 +1,5 @@
 <?xml version="1.0"?>
 
-<!--
-Grumman G-21A Goose
-Gary R. Neely 'Buckaroo', July 2009
--->
-
-
 <PropertyList>
 
 <!-- Special Groups and Shaders -->
@@ -18,6 +12,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <object-name>tcL</object-name>
   <object-name>dgL</object-name>
   <object-name>vsiL</object-name>
+
   <object-name>asiR</object-name>
   <object-name>aiR</object-name>
   <object-name>altR</object-name>
@@ -26,6 +21,8 @@ Gary R. Neely 'Buckaroo', July 2009
   <object-name>vsiR</object-name>
   <object-name>tach1</object-name>
   <object-name>tach2</object-name>
+
+  <object-name>flaps</object-name>
 </animation>
 
 
@@ -37,7 +34,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>-0.56</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 <model>
@@ -46,7 +43,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>-0.46</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 <model>
@@ -55,7 +52,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>-0.36</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 <model>
@@ -64,7 +61,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>-0.56</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.47</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 <model>
@@ -73,7 +70,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>-0.46</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.47</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 <model>
@@ -82,7 +79,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>-0.36</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.47</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 
@@ -95,7 +92,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>0.36</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 <model>
@@ -104,7 +101,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>0.46</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 <model>
@@ -113,7 +110,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>0.56</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 <model>
@@ -122,7 +119,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>0.36</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.47</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 <model>
@@ -131,7 +128,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>0.46</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.47</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 <model>
@@ -140,7 +137,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>0.56</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.47</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 
@@ -154,7 +151,7 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>0.06</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 <model>
@@ -163,7 +160,20 @@ Gary R. Neely 'Buckaroo', July 2009
   <offsets>
     <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
     <y-m>0.16</y-m>  <!-- Right (AC3D -Z) -->
-    <z-m>4.57</z-m>   <!-- UP    (AC3D Y)  -->
+    <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
+  </offsets>
+</model>
+
+
+<!-- Other instruments -->
+
+<model>
+  <name>flaps</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/flaps/flaps.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>-0.26</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.37</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
 
