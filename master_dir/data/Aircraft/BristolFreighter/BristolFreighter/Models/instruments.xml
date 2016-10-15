@@ -163,6 +163,24 @@
     <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
   </offsets>
 </model>
+<model>
+  <name>mp1</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/boost/manpress1.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>0.06</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
+  </offsets>
+</model>
+<model>
+  <name>mp2</name>
+  <path>Aircraft/BristolFreighter/Models/Instruments/boost/manpress2.xml</path>
+  <offsets>
+    <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+    <y-m>0.16</y-m>  <!-- Right (AC3D -Z) -->
+    <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
+  </offsets>
+</model>
 
 
 <!-- Other instruments -->

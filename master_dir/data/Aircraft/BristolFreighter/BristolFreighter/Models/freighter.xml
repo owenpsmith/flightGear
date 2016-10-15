@@ -11,6 +11,12 @@
   <path>Aircraft/BristolFreighter/Models/instruments.xml</path>
 </model>
 
+ <!-- start up smoke engine 1 left -->
+ <model>
+    <path>Aircraft/BristolFreighter/Models/Effects/cranking.xml</path>
+ </model>
+  
+
   <!-- *** Rudder -->
   <animation>
     <type>rotate</type>
@@ -184,10 +190,10 @@
     <factor>-90</factor>
     <axis>
       <x1-m> -8.010 </x1-m>
-      <y1-m> -1.331 </y1-m>
+      <y1-m> -1.355 </y1-m>
       <z1-m>  3.250 </z1-m>
       <x2-m> -8.010 </x2-m>
-      <y2-m> -1.331 </y2-m>
+      <y2-m> -1.355 </y2-m>
       <z2-m>  1.430 </z2-m>
     </axis>
   </animation>
@@ -199,10 +205,10 @@
     <factor>90</factor>
     <axis>
       <x1-m> -8.010 </x1-m>
-      <y1-m>  1.331 </y1-m>
+      <y1-m>  1.355 </y1-m>
       <z1-m>  3.250 </z1-m>
       <x2-m> -8.010 </x2-m>
-      <y2-m>  1.331 </y2-m>
+      <y2-m>  1.355 </y2-m>
       <z2-m>  1.430 </z2-m>
     </axis>
   </animation>  
