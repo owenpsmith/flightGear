@@ -18,9 +18,9 @@ November 2012    osmith    Created by Owen Smith    owenpsmith@shaw.ca
     
     <status>alpha</status>
     <rating>
-      <FDM     type="int"> 0 </FDM>
-      <systems type="int"> 0 </systems>
-      <cockpit type="int"> 0 </cockpit>
+      <FDM     type="int"> 1 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 2 </cockpit>
       <model   type="int"> 2 </model>
     </rating>
     
