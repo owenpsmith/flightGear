@@ -36,6 +36,10 @@ November 2012    osmith    Created by Owen Smith    owenpsmith@shaw.ca
       <path>Aircraft/BristolFreighter/Models/freighter.xml</path>
     </model>
     
+    <sound>
+      <path>Aircraft/BristolFreighter/Sounds/sound.xml</path>
+    </sound>
+
     <flaps>
       <setting>0.00</setting>
       <setting>0.17</setting>
