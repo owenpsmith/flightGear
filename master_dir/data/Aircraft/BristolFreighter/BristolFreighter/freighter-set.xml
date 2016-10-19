@@ -121,6 +121,15 @@ November 2012    osmith    Created by Owen Smith    owenpsmith@shaw.ca
           <script>BristolFreighter.doorSystem.toggleNoseDoors()</script>
         </binding>
       </key>
+
+  <key n="108">
+    <name>l</name>
+    <desc>Toggle tail-wheel lock.</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/gear/tailwheel-lock</property>
+    </binding>
+  </key>
       
     </keyboard>
   </input>
