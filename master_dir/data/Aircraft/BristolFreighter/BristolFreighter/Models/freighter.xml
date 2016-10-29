@@ -24,14 +24,33 @@
     <property>surface-positions/rudder-pos-norm</property>
     <factor>-28</factor>
     <axis>
-      <x1-m>8.753</x1-m>
-      <y1-m>0.0  </y1-m>
-      <z1-m>5.734</z1-m>
+      <x1-m>8.753</x1-m>   <!-- back -->
+      <y1-m>0.0  </y1-m>   <!-- left/right -->
+      <z1-m>5.734</z1-m>   <!-- Up -->
       <x2-m>8.716</x2-m>
       <y2-m>0.0  </y2-m>
       <z2-m>7.826</z2-m>
     </axis>
   </animation>
+  
+  
+    <!-- *** Tail wheel -->
+
+    <animation>
+      <type>rotate</type>
+      <object-name>tailWheel</object-name>
+      <property>gear/gear[2]/caster-angle-deg</property>
+      <factor>1</factor>
+    <axis>
+      <x1-m>8.900</x1-m>
+      <y1-m>0.0  </y1-m>
+      <z1-m>1.915</z1-m>
+      <x2-m>8.845</x2-m>
+      <y2-m>0.0  </y2-m>
+      <z2-m>2.399</z2-m>
+      </axis>
+    </animation>
+
 
   <!-- *** Elevators -->
   <animation>
@@ -251,7 +270,7 @@
     <center>
       <x-m> 7.324</x-m>
       <y-m>-3.907</y-m>
-      <z-m> 3.369</z-m>
+      <z-m> 3.413</z-m>
     </center>  
   </animation>
 <!--  <animation>
@@ -269,7 +288,7 @@
     <center>
       <x-m> 7.324</x-m>
       <y-m>-3.907</y-m>
-      <z-m> 3.369</z-m>
+      <z-m> 3.413</z-m>
     </center>  
   </animation>-->
 
@@ -289,7 +308,7 @@
     <center>
       <x-m> 7.324</x-m>
       <y-m>-3.907</y-m>
-      <z-m> 3.369</z-m>
+      <z-m> 3.413</z-m>
     </center>  
   </animation>
 
@@ -383,7 +402,7 @@
     <center>
       <x-m>7.324</x-m>
       <y-m>3.907</y-m>
-      <z-m>3.369</z-m>
+      <z-m>3.413</z-m>
     </center>  
   </animation>
 <!--  
