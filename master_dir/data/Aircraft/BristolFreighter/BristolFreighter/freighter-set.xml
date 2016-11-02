@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <PropertyList>
 
   <sim>
@@ -8,7 +7,7 @@
     <description>Bristol 170 Freighter Mk.31</description>
     <author>Owen Smith</author>
     <aircraft-version>20161218</aircraft-version>
-    
+
     <status>alpha</status>
     <rating>
       <FDM     type="int"> 1 </FDM>
@@ -16,19 +15,19 @@
       <cockpit type="int"> 1 </cockpit>
       <model   type="int"> 2 </model>
     </rating>
-    
+
     <flight-model>yasim</flight-model>
     <aero>freighter-yasim</aero>
-    
-	<startup>
+
+    <startup>
       <splash-texture>Aircraft/BristolFreighter/freighter-splash.png</splash-texture>
       <splash-title>Bristol 170 Freighter Mk.31</splash-title>
     </startup>
-	
+
     <model>
       <path>Aircraft/BristolFreighter/Models/freighter.xml</path>
     </model>
-    
+
     <sound>
       <path>Aircraft/BristolFreighter/Sounds/sound.xml</path>
     </sound>
@@ -42,7 +41,7 @@
       <setting>0.83</setting>
       <setting>1.00</setting>
     </flaps>
-        
+
     <view>
       <name>Cockpit View</name>
       <type>lookfrom</type>
@@ -58,70 +57,70 @@
         <default-field-of-view-deg type="double"> 55 </default-field-of-view-deg>
       </config>
     </view>
-        
-	<view>
-		<name>Tail Camera View</name>
-		<enabled type="bool" userarchive="y">true</enabled>
-		<type>lookat</type>
-		<config>
-			<from-model type="bool">false</from-model>
-			<from-model-idx type="int">0</from-model-idx>
 
-			<eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
-			<eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
-			<eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
-			<eye-pitch-deg-path>/orientation/pitch-deg</eye-pitch-deg-path>
-			<eye-roll-deg-path>/orientation/roll-deg</eye-roll-deg-path>
-			<eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>
+    <view>
+      <name>Tail Camera View</name>
+      <enabled type="bool" userarchive="y">true</enabled>
+      <type>lookat</type>
+      <config>
+        <from-model type="bool">false</from-model>
+        <from-model-idx type="int">0</from-model-idx>
 
-			<at-model type="bool">true</at-model>
-			<at-model-idx type="int">0</at-model-idx>
-			<at-model-roll-damping type="double">0</at-model-roll-damping>
-			<at-model-pitch-damping type="double">0</at-model-pitch-damping>
-			<at-model-heading-damping type="double">0</at-model-heading-damping>
-			<target-z-offset-m type="double">0</target-z-offset-m>
-				<target-y-offset-m type="double">3.5</target-y-offset-m>
+        <eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
+        <eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
+        <eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
+        <eye-pitch-deg-path>/orientation/pitch-deg</eye-pitch-deg-path>
+        <eye-roll-deg-path>/orientation/roll-deg</eye-roll-deg-path>
+        <eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>
 
-			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-			<default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+        <at-model type="bool">true</at-model>
+        <at-model-idx type="int">0</at-model-idx>
+        <at-model-roll-damping type="double">0</at-model-roll-damping>
+        <at-model-pitch-damping type="double">0</at-model-pitch-damping>
+        <at-model-heading-damping type="double">0</at-model-heading-damping>
+        <target-z-offset-m type="double">0</target-z-offset-m>
+        <target-y-offset-m type="double">3.5</target-y-offset-m>
 
-			<x-offset-m type="double">0</x-offset-m>
-			<y-offset-m type="double">5</y-offset-m>
-			<z-offset-m alias="/sim/chase-distance-m"/>
-		</config>
-	</view>
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
 
-	<view n="1">
-	  <config>
-	   <target-y-offset-m archive="y" type="double">3.5</target-y-offset-m>
-	  </config>
-	 </view>
+        <x-offset-m type="double">0</x-offset-m>
+        <y-offset-m type="double">5</y-offset-m>
+        <z-offset-m alias="/sim/chase-distance-m"/>
+      </config>
+    </view>
 
-	 <view n="2">
-	  <config>
-	   <target-y-offset-m archive="y" type="double">3.5</target-y-offset-m>
-	  </config>
-	 </view>
+    <view n="1">
+      <config>
+        <target-y-offset-m archive="y" type="double">3.5</target-y-offset-m>
+      </config>
+    </view>
 
-	 <view n="3">
-	  <config>
-	   <target-y-offset-m archive="y" type="double">3.5</target-y-offset-m>
-	  </config>
-	 </view>
+    <view n="2">
+      <config>
+        <target-y-offset-m archive="y" type="double">3.5</target-y-offset-m>
+      </config>
+    </view>
 
-	 <view n="4">
-	  <config>
-	   <target-y-offset-m archive="y" type="double">3.5</target-y-offset-m>
-	  </config>
-	 </view>
+    <view n="3">
+      <config>
+        <target-y-offset-m archive="y" type="double">3.5</target-y-offset-m>
+      </config>
+   </view>
 
+    <view n="4">
+      <config>
+        <target-y-offset-m archive="y" type="double">3.5</target-y-offset-m>
+      </config>
+    </view>
 
-        
   </sim>
-  
+
+
   <input>
+
     <keyboard>
-    
+
       <key n="100">
         <name>d</name>
         <desc>Toggle Nose Doors</desc>
@@ -131,18 +130,19 @@
         </binding>
       </key>
 
-  <key n="108">
-    <name>l</name>
-    <desc>Toggle tail-wheel lock.</desc>
-    <binding>
-      <command>property-toggle</command>
-      <property>/controls/gear/tailwheel-lock</property>
-    </binding>
-  </key>
-      
+      <key n="108">
+        <name>l</name>
+        <desc>Toggle tail-wheel lock.</desc>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/gear/tailwheel-lock</property>
+        </binding>
+      </key>
+
     </keyboard>
+
   </input>
-          
+
   <nasal>
     <BristolFreighter>
       <file>Aircraft/BristolFreighter/Nasal/doors.nas</file>
