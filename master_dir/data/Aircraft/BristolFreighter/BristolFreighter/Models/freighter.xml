@@ -235,19 +235,12 @@
   
   <!-- *** Props -->
 
-  <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <object-name>propBlur1L</object-name>
-    <object-name>propBlur2L</object-name>
-    <object-name>propBlur3L</object-name>
-    <object-name>propBlur4L</object-name>
-  </effect>
-
-
   <!-- Left prop -->
   <animation>
-    <type>rotate</type>
+    <type>spin</type>
     <object-name>propL</object-name>
+    <object-name>propL_spinner</object-name>
+    <object-name>propL_fan</object-name>
     <condition>
       <and>
         <greater-than>
@@ -256,29 +249,11 @@
         </greater-than>
         <less-than>
           <property>engines/engine[0]/rpm</property>
-          <value>500.0</value>
+          <value>1000.0</value>
         </less-than>
       </and> 
     </condition> 
-	<property>/sim/time/elapsed-sec</property>
-    <factor>180.0</factor>
-    <axis>
-      <x> 1.0 </x>
-      <y> 0.0 </y>
-      <z> 0.0 </z>
-    </axis>
-    <center>
-      <x-m> 7.324</x-m>
-      <y-m>-3.907</y-m>
-      <z-m> 3.413</z-m>
-    </center>  
-  </animation>
-<!--  <animation>
-    <type>spin</type>
-    <object-name>propL</object-name>
-    <object-name>spinnerL</object-name>
-    <object-name>cowlFanL</object-name>
-    <property>engines/engine[0]/rpm</property>
+	<property>engines/engine[0]/rpm</property>
     <factor>0.444</factor>
     <axis>
       <x> 1.0 </x>
@@ -290,109 +265,39 @@
       <y-m>-3.907</y-m>
       <z-m> 3.413</z-m>
     </center>  
-  </animation>-->
-
-  <animation>
-    <type>spin</type>
-    <object-name>propBlur1L</object-name>
-    <object-name>propBlur2L</object-name>
-    <object-name>propBlur3L</object-name>
-    <object-name>propBlur4L</object-name>
-    <property>engines/engine[0]/rpm</property>
-    <factor>0.0444</factor>
-    <axis>
-      <x> 1.0 </x>
-      <y> 0.0 </y>
-      <z> 0.0 </z>
-    </axis>
-    <center>
-      <x-m> 7.324</x-m>
-      <y-m>-3.907</y-m>
-      <z-m> 3.413</z-m>
-    </center>  
   </animation>
 
   <animation>
     <type>select</type>
     <object-name>propL</object-name>
+    <object-name>propL_fan</object-name>
     <condition>
       <less-than>
         <property>engines/engine[0]/rpm</property>
-        <value>500.0</value>
+        <value>1000</value>
       </less-than>
     </condition>
   </animation>
   
-  <animation>
-    <type>select</type>
-    <object-name>propBlur1L</object-name>
-    <condition>
-      <and>
-        <greater-than>
-          <property>engines/engine[0]/rpm</property>
-          <value>500.00</value>
-        </greater-than>
-        <less-than>
-          <property>engines/engine[0]/rpm</property>
-          <value>1200.0</value>
-        </less-than>
-      </and>
-    </condition>
-  </animation>
- 
-  <animation>
-    <type>select</type>
-    <object-name>propBlur2L</object-name>
-    <condition>
-      <and>
-        <greater-than>
-          <property>engines/engine[0]/rpm</property>
-          <value>1200.0</value>
-        </greater-than>
-        <less-than>
-          <property>engines/engine[0]/rpm</property>
-          <value>1900.0</value>
-        </less-than>
-      </and>
-    </condition>
-  </animation>
- 
-  <animation>
-    <type>select</type>
-    <object-name>propBlur3L</object-name>
-    <condition>
-      <and>
-        <greater-than>
-          <property>engines/engine[0]/rpm</property>
-          <value>1900.0</value>
-        </greater-than>
-        <less-than>
-          <property>engines/engine[0]/rpm</property>
-          <value>2600.0</value>
-        </less-than>
-      </and>
-    </condition>
-  </animation>
- 
-  <animation>
-    <type>select</type>
-    <object-name>propBlur4L</object-name>
-    <condition>
-      <greater-than>
-        <property>engines/engine[0]/rpm</property>
-        <value>2600.0</value>
-      </greater-than>
-    </condition>
-  </animation>
-
   <!-- Right prop -->
   <animation>
     <type>spin</type>
     <object-name>propR</object-name>
-    <object-name>spinnerR</object-name>
-    <object-name>cowlFanR</object-name>
-    <!--<object-name>propblurR</object-name>-->
-    <property>engines/engine[1]/rpm</property>
+    <object-name>propR_spinner</object-name>
+    <object-name>propR_fan</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>engines/engine[1]/rpm</property>
+          <value>1.0</value>
+        </greater-than>
+        <less-than>
+          <property>engines/engine[1]/rpm</property>
+          <value>1000.0</value>
+        </less-than>
+      </and> 
+    </condition> 
+	<property>engines/engine[1]/rpm</property>
     <factor>0.444</factor>
     <axis>
       <x> 1.0 </x>
@@ -400,52 +305,23 @@
       <z> 0.0 </z>
     </axis>
     <center>
-      <x-m>7.324</x-m>
-      <y-m>3.907</y-m>
-      <z-m>3.413</z-m>
+      <x-m> 7.324</x-m>
+      <y-m> 3.907</y-m>
+      <z-m> 3.413</z-m>
     </center>  
   </animation>
-<!--  
+
   <animation>
     <type>select</type>
-    <object-name>heliceD</object-name>
+    <object-name>propR</object-name>
+    <object-name>propR_fan</object-name>
     <condition>
       <less-than>
-        <property alias="../../../../parameters/engine-rpm"/>
-        <value>675.00</value>
+        <property>engines/engine[1]/rpm</property>
+        <value>1000</value>
       </less-than>
     </condition>
   </animation>
   
-  <animation>
-    <type>select</type>
-    <object-name>propblurD</object-name>
-    <condition>
-      <and>
-        <greater-than>
-          <property alias="../../../../../parameters/engine-rpm"/>
-            <value>225.00</value>
-        </greater-than>
-        <less-than>
-          <property alias="../../../../../parameters/engine-rpm"/>
-          <value>675.01</value>
-        </less-than>
-      </and>
-    </condition>
-  </animation>
- 
-  <animation>
-    <type>select</type>
-    <object-name>propdiscD</object-name>
-    <condition>
-      <greater-than>
-        <property alias="../../../../parameters/engine-rpm"/>
-        <value>675.00</value>
-      </greater-than>
-    </condition>
-  </animation>
--->
-  
-
 </PropertyList>
 
