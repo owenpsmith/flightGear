@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- 
-  ***************************************************************************************
-  Bristol 170 Freighter
-  November 2012 Created by Owen Smith   owenpsmith@shaw.ca
-  ***************************************************************************************
--->
-
   <airplane mass="29950" version="YASIM_VERSION_ORIGINAL">
 
   <approach speed="82" aoa="7" fuel="0.2">
