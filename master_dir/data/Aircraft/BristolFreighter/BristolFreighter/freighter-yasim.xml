@@ -7,7 +7,7 @@
   ***************************************************************************************
 -->
 
-  <airplane mass="29950">
+  <airplane mass="29950" version="YASIM_VERSION_ORIGINAL">
 
   <approach speed="82" aoa="7" fuel="0.2">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
@@ -198,7 +198,7 @@
 
 
   <!-- Left main -->
-  <gear x="4.830" y="4.268" z="0.04"
+  <gear x="4.980" y="4.268" z="0.04"
         compression="0.30"
         spring="0.7"
         damp="1.0"
@@ -209,7 +209,7 @@
   </gear>
 
   <!-- Right main -->
-  <gear x="4.830" y="-4.268" z="0.04"
+  <gear x="4.980" y="-4.268" z="0.04"
         compression="0.30"
         spring="0.7"
         damp="1.0"
