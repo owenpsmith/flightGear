@@ -16,18 +16,41 @@ Cruise speed:	141 knots
 Range:			715nm with full payload, 1505nm with full fuel
 
 
-Handling Info
+HANDLING INFO
 =============
 
-This FG model stalls a bit fast, around 90-100kts depending on flap setting, but drops one wing
-in the stall just like the real one.  It floats quite a bit on aproach and landing, just as the 
-real on does so slow down early in the approach.  It also loses much of the aileron authority
-at low speeds just as the real one was reported to do, so plan ahead!
+The FDM is only my initial configuration.  While it still needs more work, basic handling is
+as expected for the Freighter.  The main issue is that it stalls a bit fast, around 90-100kts 
+depending on flap setting (compared to 55-71 on the real one), but drops one wing in the stall 
+just like the real one.  It floats quite a bit on aproach and landing, just as the real on does 
+so slow down early in the approach.  It also loses much of the aileron authority at low speeds 
+just as the real one was reported to do, so plan ahead!
 
 
-Useful Keys
+USEFUL KEYS
 ===========
 
 d - opens/closes nose doors
 l - toggles tail wheel lock
+
+
+*** LIVERIES ***
+================
+
+I have released this model with a temporary texture map and livery for Trans-Provincial Airlines.
+This texture map *WILL* change as I refine the model.  *Please* do not upload liveries to the main liveris
+page until I refine the model and re-work the texture map.  If you create liveries  using this map, 
+please share them!  Either post them to the forum in my Bristol Freighter thread, or email them to me
+and I will include them in the next release.
+
+
+NEXT RELEASE
+============
+
+Planned updates for the next release include the following:
+ - Replace generic flat instrument panel with factory panel layout
+ - Add pedestal with animated engine controls
+ - Add more generic instruments
+  - add stringers and windows to cargo bay
+ - Clean up nose door mesh
 

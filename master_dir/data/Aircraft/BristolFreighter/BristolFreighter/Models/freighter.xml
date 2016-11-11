@@ -6,15 +6,14 @@
     <path>Aircraft/BristolFreighter/Models/freighter.ac</path>
   </model>
 
-<model>
-  <name>Instruments</name>
-  <path>Aircraft/BristolFreighter/Models/instruments.xml</path>
-</model>
+  <model>
+    <name>Instruments</name>
+    <path>Aircraft/BristolFreighter/Models/instruments.xml</path>
+  </model>
 
- <model>
+  <model>
     <path>Aircraft/BristolFreighter/Models/Effects/cranking.xml</path>
- </model>
-  
+  </model>
 
   <!-- *** Rudder -->
   <animation>
@@ -35,11 +34,11 @@
   
     <!-- *** Tail wheel -->
 
-    <animation>
-      <type>rotate</type>
-      <object-name>tailWheel</object-name>
-      <property>gear/gear[2]/caster-angle-deg</property>
-      <factor>1</factor>
+  <animation>
+    <type>rotate</type>
+    <object-name>tailWheel</object-name>
+    <property>gear/gear[2]/caster-angle-deg</property>
+    <factor>1</factor>
     <axis>
       <x1-m>8.900</x1-m>
       <y1-m>0.0  </y1-m>
@@ -47,8 +46,8 @@
       <x2-m>8.845</x2-m>
       <y2-m>0.0  </y2-m>
       <z2-m>2.399</z2-m>
-      </axis>
-    </animation>
+    </axis>
+  </animation>
 
 
   <!-- *** Elevators -->
@@ -204,6 +203,11 @@
   <animation>
     <type>rotate</type>
     <object-name>noseDoorL</object-name>
+    <object-name>noseDoorL_interior</object-name>
+    <object-name>noseDoorL_framework</object-name>
+    <object-name>noseDoorL_brace</object-name>
+    <object-name>noseDoorL_hinges</object-name>
+    <object-name>noseDoorL_transparent</object-name>
     <property>instrumentation/doors/noseDoors/position-norm</property>
     <factor>-90</factor>
     <axis>
@@ -219,6 +223,11 @@
   <animation>
     <type>rotate</type>
     <object-name>noseDoorR</object-name>
+    <object-name>noseDoorR_interior</object-name>
+    <object-name>noseDoorR_framework</object-name>
+    <object-name>noseDoorR_brace</object-name>
+    <object-name>noseDoorR_hinges</object-name>
+    <object-name>noseDoorR_transparent</object-name>
     <property>instrumentation/doors/noseDoors/position-norm</property>
     <factor>90</factor>
     <axis>

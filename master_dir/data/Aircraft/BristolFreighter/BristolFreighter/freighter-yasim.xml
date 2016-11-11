@@ -3,23 +3,24 @@
   <airplane mass="29950" version="YASIM_VERSION_ORIGINAL">
 
   <approach speed="82" aoa="7" fuel="0.2">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.4"/>
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
-    <control-setting axis="/controls/engines/engine[1]/mixture" value="1"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1"/>
     <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1"/>
     <control-setting axis="/controls/engines/engine[0]/boost" value="1.0"/>
     <control-setting axis="/controls/engines/engine[1]/boost" value="1.0"/>
     <control-setting axis="/controls/flight/flaps" value="1"/>
+  <control-setting axis="/controls/gear/gear-down" value="1" />
   </approach>
 
   <cruise speed="125" alt="10000" fuel="0.5">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="1"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.5"/>
-    <control-setting axis="/controls/engines/engine[1]/mixture" value="0.5"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.75" />
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.5"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="0.75" />
     <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.5"/>
     <control-setting axis="/controls/engines/engine[0]/boost" value="1.0"/>
     <control-setting axis="/controls/engines/engine[1]/boost" value="1.0"/>
@@ -125,68 +126,65 @@
 
   <!-- Engine left -->
   <propeller x="6.417" y="3.917" z="3.363"
+             radius="2.336"
              mass="2275"
-             moment="-226"
-             radius="2.134"
-             cruise-speed="145"
-             cruise-rpm="1065"
+             moment="-125"
              cruise-power="1120"
              cruise-alt="10000"
+             cruise-speed="145"
+             cruise-rpm="1065"
              takeoff-rpm="1243"
              takeoff-power="1980"
+             fine-stop="1.25"
+             coarse-stop="4.0"
              min-rpm="244"
              max-rpm="1243" 
-             fine-stop="0.25"
-             course-stop="4.0"
              gear-ratio="0.444">
              <actionpt x="7.208" y="3.917" z="3.363"/>
-             <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
-             <piston-engine eng-power="1980"
+             <piston-engine
                             eng-rpm="2800"
+                            eng-power="1980"
+                            alt="0"
                             displacement="2360"
                             compression="7.0"
-                            supercharger="1"
-                            turbo-mul="1.85"
-                            wastegate-mp="56">
-                            <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
-                            <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
-                            <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
-                            <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
-                            <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
-             </piston-engine>
+                            supercharger="1"/>
+             <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+             <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
+             <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
   </propeller>
 
   <!-- Engine right-->
   <propeller x="6.417" y="-3.917" z="3.363"
+             radius="2.336"
              mass="2275"
-             moment="-226"
-             radius="2.134"
-             cruise-speed="145"
-             cruise-rpm="1065"
+             moment="-125"
              cruise-power="1120"
              cruise-alt="10000"
-             takeoff-rpm="1243"
+             cruise-speed="145"
+             cruise-rpm="1065"
              takeoff-power="1980"
+             takeoff-rpm="1243"
+             fine-stop="1.25"
+             coarse-stop="4.0"
              min-rpm="244"
              max-rpm="1243" 
-             fine-stop="0.25"
-             course-stop="4.0"
              gear-ratio="0.444">
              <actionpt x="7.208" y="-3.917" z="3.363"/>
-             <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
-             <piston-engine eng-power="1980"
+             <piston-engine
                             eng-rpm="2800"
+                            eng-power="1980"
+                            alt="0"
                             displacement="2360"
-                            compression="7.0"
-                            supercharger="1"
-                            turbo-mul="1.85"
-                            wastegate-mp="56">
-                            <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
-                            <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
-                            <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
-                            <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
-                            <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
-             </piston-engine>
+                            compression="7.0"/>
+             <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
+             <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
+             <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE" />
   </propeller>
 
 
