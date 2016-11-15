@@ -38,19 +38,15 @@ l - toggles tail wheel lock
 ================
 
 I have released this model with a temporary texture map and livery for Trans-Provincial Airlines.
-This texture map *WILL* change as I refine the model.  *Please* do not upload liveries to the main liveris
+This texture map *WILL* change as I refine the model.  *Please* do not upload liveries to the main liveries
 page until I refine the model and re-work the texture map.  If you create liveries  using this map, 
-please share them!  Either post them to the forum in my Bristol Freighter thread, or email them to me
+please share them!  Either post them to the forum in my Bristol Freighter thread:
+
+	https://forum.flightgear.org/viewtopic.php?f=4&t=30976
+
+or email them to me:
+
+	owenpsmith@shaw.ca
+
 and I will include them in the next release.
-
-
-NEXT RELEASE
-============
-
-Planned updates for the next release include the following:
- - Replace generic flat instrument panel with factory panel layout
- - Add pedestal with animated engine controls
- - Add more generic instruments
-  - add stringers and windows to cargo bay
- - Clean up nose door mesh
 
