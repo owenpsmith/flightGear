@@ -23,11 +23,11 @@ Version: 20161218.01
 Status: ALPHA
 
 Rating:
-	- FDM     - 1
-	- Systems - 1
-	- cockpit - 1
-	- model   - 2
-	
+    - FDM     - 1
+    - Systems - 1
+    - cockpit - 1
+    - model   - 2
+
 - Basic but stable FDM
 - Basic but accurate 3D model includes cockpit windows, basic cargo bay details, and animated nose doors
 - Animated ailerons, elevators, rudder and flaps
