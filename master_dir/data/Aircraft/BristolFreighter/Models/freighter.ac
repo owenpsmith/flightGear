@@ -5,7 +5,7 @@ MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.976471 0.976471 0.9
 MATERIAL "ac3dmat2" rgb 0.345098 0.345098 0.345098  amb 0.34902 0.34902 0.34902  emis 0 0 0  spec 0.345098 0.345098 0.345098  shi 128  trans 0.427
 MATERIAL "Rubber" rgb 0.211765 0.211765 0.211765  amb 0.192157 0.192157 0.192157  emis 0 0 0  spec 0 0 0  shi 50  trans 0
 OBJECT world
-kids 14
+kids 14 
 OBJECT group
 name "PropGroup"
 loc -7.13637 3.55168 1.93775
