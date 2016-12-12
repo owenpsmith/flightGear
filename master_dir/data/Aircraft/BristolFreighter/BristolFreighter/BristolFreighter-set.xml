@@ -6,7 +6,7 @@
 
     <description>Bristol 170 Freighter Mk.31</description>
     <author>Owen Smith</author>
-    <aircraft-version>20161218.01</aircraft-version>
+    <aircraft-version>20161210.01</aircraft-version>
 
     <status>alpha</status>
     <rating>
@@ -17,15 +17,15 @@
     </rating>
 
     <flight-model>yasim</flight-model>
-    <aero>freighter-yasim</aero>
+    <aero>BristolFreighter-yasim</aero>
 
     <startup>
-      <splash-texture>Aircraft/BristolFreighter/freighter-splash.png</splash-texture>
+      <splash-texture>Aircraft/BristolFreighter/BristolFreighter-splash.png</splash-texture>
       <splash-title>Bristol 170 Freighter Mk.31</splash-title>
     </startup>
 
     <model>
-      <path>Aircraft/BristolFreighter/Models/freighter.xml</path>
+      <path>Aircraft/BristolFreighter/Models/BristolFreighter.xml</path>
     </model>
 
     <sound>
@@ -42,23 +42,62 @@
       <setting>1.00</setting>
     </flaps>
 
-    <view>
-      <name>Cockpit View</name>
-      <type>lookfrom</type>
+    <view n="0">
+      <name>Pilot View</name>
       <internal archive="y">true</internal>
       <config>
-        <from-model type="bool">true</from-model>
-        <from-model-idx type="int">0</from-model-idx>
-        <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-        <x-offset-m archive="y"> -0.250 </x-offset-m> <!--Right-->
-        <y-offset-m archive="y">  4.870 </y-offset-m> <!--Up-->
-        <z-offset-m archive="y"> -7.500 </z-offset-m> <!--Back-->
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <x-offset-m archive="y"> -0.630 </x-offset-m> <!--Right-->
+        <y-offset-m archive="y">  4.830 </y-offset-m> <!--Up-->
+        <z-offset-m archive="y"> -7.920 </z-offset-m> <!--Back-->
         <pitch-offset-deg> -15 </pitch-offset-deg>
         <default-field-of-view-deg type="double"> 55 </default-field-of-view-deg>
       </config>
     </view>
 
-    <view>
+    <view n="1">
+      <config>
+        <target-y-offset-m archive="y" type="double"> 3.5 </target-y-offset-m>
+      </config>
+    </view>
+
+    <view n="2">
+      <config>
+        <target-y-offset-m archive="y" type="double"> 3.5 </target-y-offset-m>
+      </config>
+    </view>
+
+    <view n="3">
+      <config>
+        <target-y-offset-m archive="y" type="double"> 3.5 </target-y-offset-m>
+      </config>
+    </view>
+
+    <view n="4">
+      <config>
+        <target-y-offset-m archive="y" type="double"> 3.5 </target-y-offset-m>
+      </config>
+    </view>
+
+    <view n="5">
+      <config>
+        <target-y-offset-m archive="y" type="double"> 3.5 </target-y-offset-m>
+      </config>
+    </view>
+
+    <view n="6">
+      <config>
+        <target-y-offset-m archive="y" type="double"> 3.5 </target-y-offset-m>
+      </config>
+    </view>
+
+    <view n="7">
+      <config>
+        <target-y-offset-m archive="y" type="double"> 3.5 </target-y-offset-m>
+      </config>
+    </view>
+
+    <view n="100">
       <name>Tail Camera View</name>
       <enabled type="bool" userarchive="y">true</enabled>
       <type>lookat</type>
@@ -87,30 +126,6 @@
         <x-offset-m type="double">0</x-offset-m>
         <y-offset-m type="double">5</y-offset-m>
         <z-offset-m alias="/sim/chase-distance-m"/>
-      </config>
-    </view>
-
-    <view n="1">
-      <config>
-        <target-y-offset-m archive="y" type="double">3.5</target-y-offset-m>
-      </config>
-    </view>
-
-    <view n="2">
-      <config>
-        <target-y-offset-m archive="y" type="double">3.5</target-y-offset-m>
-      </config>
-    </view>
-
-    <view n="3">
-      <config>
-        <target-y-offset-m archive="y" type="double">3.5</target-y-offset-m>
-      </config>
-   </view>
-
-    <view n="4">
-      <config>
-        <target-y-offset-m archive="y" type="double">3.5</target-y-offset-m>
       </config>
     </view>
 

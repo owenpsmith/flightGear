@@ -25,14 +25,14 @@
   </animation>
 
 
-<!-- Pilot Panel -->
+  <!-- Pilot Panel -->
   <model>
     <name>asiL</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
-      <y-m>-0.56</y-m>   <!-- Right (AC3D -Z) -->
-      <z-m>4.57</z-m>    <!-- Up    (AC3D Y)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
+      <y-m>-0.73</y-m>   <!-- Right (AC3D -Z) -->
+      <z-m>4.53</z-m>    <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
@@ -40,9 +40,9 @@
     <name>aiL</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/ai/ai.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
-      <y-m>-0.46</y-m>   <!-- Right (AC3D -Z) -->
-      <z-m>4.57</z-m>    <!-- Up    (AC3D Y)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
+      <y-m>-0.63</y-m>   <!-- Right (AC3D -Z) -->
+      <z-m>4.53</z-m>    <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
@@ -50,19 +50,19 @@
     <name>altL</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
-      <y-m>-0.36</y-m>   <!-- Right (AC3D -Z) -->
-      <z-m>4.57</z-m>    <!-- Up    (AC3D Y)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
+      <y-m>-0.53</y-m>   <!-- Right (AC3D -Z) -->
+      <z-m>4.53</z-m>    <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
   <model>
     <name>tcL</name>
-    <path>Aircraft/BristolFreighter/Models/Instruments/tc/tc.xml</path>
+    <path>Aircraft/Instruments-3d/tc/tc.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
-      <y-m>-0.56</y-m>  <!-- Right (AC3D -Z) -->
-      <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
+      <y-m>-0.73</y-m>  <!-- Right (AC3D -Z) -->
+      <z-m>4.43</z-m>   <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
@@ -70,9 +70,9 @@
     <name>hiL</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/hi/hi.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
-      <y-m>-0.46</y-m>  <!-- Right (AC3D -Z) -->
-      <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
+      <y-m>-0.63</y-m>  <!-- Right (AC3D -Z) -->
+      <z-m>4.43</z-m>   <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
@@ -80,21 +80,21 @@
     <name>vsiL</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/vsi/VSI.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
-      <y-m>-0.36</y-m>  <!-- Right (AC3D -Z) -->
-      <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
+      <y-m>-0.53</y-m>  <!-- Right (AC3D -Z) -->
+      <z-m>4.43</z-m>   <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
 
-<!-- Co-pilot Panel -->
+  <!-- Co-pilot Panel -->
   <model>
     <name>asiR</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
-      <y-m>0.36</y-m>  <!-- Right (AC3D -Z) -->
-      <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
+      <y-m>0.40</y-m>  <!-- Right (AC3D -Z) -->
+      <z-m>4.53</z-m>   <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
   
@@ -102,9 +102,9 @@
     <name>aiR</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/ai/ai.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
-      <y-m>0.46</y-m>  <!-- Right (AC3D -Z) -->
-      <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
+      <y-m>0.50</y-m>  <!-- Right (AC3D -Z) -->
+      <z-m>4.53</z-m>   <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
@@ -112,19 +112,19 @@
     <name>altR</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
-      <y-m>0.56</y-m>  <!-- Right (AC3D -Z) -->
-      <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
+      <y-m>0.60</y-m>  <!-- Right (AC3D -Z) -->
+      <z-m>4.53</z-m>   <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
   <model>
     <name>tcR</name>
-    <path>Aircraft/BristolFreighter/Models/Instruments/tc/tc.xml</path>
+    <path>Aircraft/Instruments-3d/tc/tc.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
-      <y-m>0.36</y-m>  <!-- Right (AC3D -Z) -->
-      <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
+      <y-m>0.40</y-m>  <!-- Right (AC3D -Z) -->
+      <z-m>4.43</z-m>   <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
@@ -132,9 +132,9 @@
     <name>hiR</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/hi/hi.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
-      <y-m>0.46</y-m>  <!-- Right (AC3D -Z) -->
-      <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
+      <y-m>0.50</y-m>  <!-- Right (AC3D -Z) -->
+      <z-m>4.43</z-m>   <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
@@ -142,20 +142,20 @@
     <name>vsiR</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/vsi/VSI.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
-      <y-m>0.56</y-m>  <!-- Right (AC3D -Z) -->
-      <z-m>4.47</z-m>   <!-- Up    (AC3D Y)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
+      <y-m>0.60</y-m>  <!-- Right (AC3D -Z) -->
+      <z-m>4.43</z-m>   <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
-<!-- Engine Instruments -->
+  <!-- Engine Instruments -->
   <model>
     <name>tach1</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/tach/tach1.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
       <y-m>0.06</y-m>  <!-- Right (AC3D -Z) -->
-      <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
+      <z-m>4.53</z-m>   <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
@@ -163,18 +163,18 @@
     <name>tach2</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/tach/tach2.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+      <x-m>-8.520</x-m>  <!-- Back  (AC3D X)  -->
       <y-m>0.16</y-m>  <!-- Right (AC3D -Z) -->
-      <z-m>4.57</z-m>   <!-- Up    (AC3D Y)  -->
+      <z-m>4.53</z-m>   <!-- Up    (AC3D Y)  -->
     </offsets>
   </model>
 
-<!-- Other instruments -->
+  <!-- Other instruments -->
   <model>
     <name>flaps</name>
     <path>Aircraft/BristolFreighter/Models/Instruments/flaps/flaps.xml</path>
     <offsets>
-      <x-m>-8.365</x-m>  <!-- Back  (AC3D X)  -->
+      <x-m>-8.540</x-m>  <!-- Back  (AC3D X)  -->
       <y-m>-0.26</y-m>  <!-- Right (AC3D -Z) -->
       <z-m>4.37</z-m>   <!-- Up    (AC3D Y)  -->
     </offsets>

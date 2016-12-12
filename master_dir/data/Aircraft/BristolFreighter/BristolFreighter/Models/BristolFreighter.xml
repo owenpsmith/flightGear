@@ -3,7 +3,7 @@
 <PropertyList>
 
   <model>
-    <path>Aircraft/BristolFreighter/Models/freighter.ac</path>
+    <path>Aircraft/BristolFreighter/Models/BristolFreighter.ac</path>
   </model>
 
   <model>
@@ -40,15 +40,14 @@
     <property>gear/gear[2]/caster-angle-deg</property>
     <factor>1</factor>
     <axis>
-      <x1-m>8.900</x1-m>
+      <x1-m>8.98714</x1-m>
       <y1-m>0.0  </y1-m>
-      <z1-m>1.915</z1-m>
-      <x2-m>8.845</x2-m>
+      <z1-m>2.06813</z1-m>
+      <x2-m>8.94891</x2-m>
       <y2-m>0.0  </y2-m>
-      <z2-m>2.399</z2-m>
+      <z2-m>2.39904</z2-m>
     </axis>
   </animation>
-
 
   <!-- *** Elevators -->
   <animation>
@@ -356,6 +355,96 @@
       </greater-than>
     </condition>
   </animation>
+  
+    <!-- Control wheels -->
+  <animation>
+    <type>rotate</type>
+    <object-name>wheelPilot</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+    </interpolation>    
+    <axis>
+      <x1-m>  -8.31453 </x1-m>
+      <y1-m>  -0.63</y1-m>
+      <z1-m>   4.47909 </z1-m>
+      <x2-m>  -8.36005 </x2-m>
+      <y2-m>  -0.63 </y2-m>
+      <z2-m>   4.47909 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>wheelCopilot</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+    </interpolation>    
+    <axis>
+      <x1-m>  -8.31453 </x1-m>
+      <y1-m>   0.50</y1-m>
+      <z1-m>   4.47909 </z1-m>
+      <x2-m>  -8.36005 </x2-m>
+      <y2-m>   0.50 </y2-m>
+      <z2-m>   4.47909 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>yokePilot</object-name>
+    <object-name>wheelPilot</object-name>
+    <object-name>yokeCopilot</object-name>
+    <object-name>wheelCopilot</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 6.0</dep>
+      </entry>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-6.0</dep>
+      </entry>
+    </interpolation>    
+    <axis>
+      <x1-m>  -8.340 </x1-m>
+      <y1-m>   0.6775</y1-m>
+      <z1-m>   3.50 </z1-m>
+      <x2-m>  -8.340 </x2-m>
+      <y2-m>  -0.5475 </y2-m>
+      <z2-m>   3.50 </z2-m>
+    </axis>
+  </animation>
+
+
   
 </PropertyList>
 

@@ -2,36 +2,35 @@
 
 <PropertyList>
 
-
- <!-- start up smoke engine 1 left -->
- <model>
+  <!-- start up smoke engine 1 eft -->
+  <model>
     <path>Aircraft/BristolFreighter/Models/Effects/cranking/smoke1.xml</path>
-        <condition>
-            <property>engines/engine[0]/cranking</property>
-        </condition>
-       <offsets>
-         <x-m> -5.93 </x-m>			<!-- Back  (AC3D X)  -->
-         <y-m> -4.45 </y-m>			<!-- Right (AC3D -Z) -->
-         <z-m> 3.92 </z-m>			<!-- Up    (AC3D Y)  -->
-         <heading-deg>-20</heading-deg>		<!--  0 back, 90 right, -90 left  -->
-         <pitch-deg>80</pitch-deg>		<!--  0 up, 90 out, 180 down      -->
-         <roll-deg>0</roll-deg>			
-       </offsets>
+    <condition>
+      <property>engines/engine[0]/cranking</property>
+    </condition>
+    <offsets>
+      <x-m> -5.93 </x-m>			<!-- Back  (AC3D X)  -->
+      <y-m> -4.45 </y-m>			<!-- Right (AC3D -Z) -->
+      <z-m> 3.92 </z-m>			<!-- Up    (AC3D Y)  -->
+      <heading-deg>-20</heading-deg>		<!--  0 back, 90 right, -90 left  -->
+      <pitch-deg>80</pitch-deg>		<!--  0 up, 90 out, 180 down      -->
+      <roll-deg>0</roll-deg>			
+    </offsets>
   </model>
   
   <model>
     <path>Aircraft/BristolFreighter/Models/Effects/cranking/smoke1.xml</path>
-        <condition>
-            <property>engines/engine[0]/cranking</property>
-        </condition>
-       <offsets>
-         <x-m> -5.93 </x-m>
-         <y-m> -4.45 </y-m>
-         <z-m> 2.82 </z-m>
-         <heading-deg>-20</heading-deg>
-         <pitch-deg>90</pitch-deg>
-         <roll-deg>0</roll-deg>
-       </offsets>
+    <condition>
+      <property>engines/engine[0]/cranking</property>
+    </condition>
+    <offsets>
+      <x-m> -5.93 </x-m>
+      <y-m> -4.45 </y-m>
+      <z-m> 2.82 </z-m>
+      <heading-deg>-20</heading-deg>
+      <pitch-deg>90</pitch-deg>
+      <roll-deg>0</roll-deg>
+    </offsets>
   </model>
 
   
@@ -39,97 +38,97 @@
   
   <model>
     <path>Aircraft/BristolFreighter/Models/Effects/cranking/smoke1.xml</path>
-        <condition>
-            <property>engines/engine[0]/cranking</property>
-        </condition>
-       <offsets>
-         <x-m> -5.93 </x-m>
-         <y-m> -3.36 </y-m>
-         <z-m> 3.92 </z-m>
-         <heading-deg>20</heading-deg>
-         <pitch-deg>80</pitch-deg>
-         <roll-deg>0</roll-deg>
-       </offsets>
+    <condition>
+          <property>engines/engine[0]/cranking</property>
+    </condition>
+    <offsets>
+      <x-m> -5.93 </x-m>
+      <y-m> -3.36 </y-m>
+      <z-m> 3.92 </z-m>
+      <heading-deg>20</heading-deg>
+      <pitch-deg>80</pitch-deg>
+      <roll-deg>0</roll-deg>
+    </offsets>
   </model>
   
   <model>
     <path>Aircraft/BristolFreighter/Models/Effects/cranking/smoke1.xml</path>
-        <condition>
-            <property>engines/engine[0]/cranking</property>
-        </condition>
-       <offsets>
-         <x-m> -5.93 </x-m>
-         <y-m> -3.36</y-m>
-         <z-m> 2.82 </z-m>
-         <heading-deg>20</heading-deg>
-         <pitch-deg>90</pitch-deg>
-         <roll-deg>0</roll-deg>
-       </offsets>
+    <condition>
+          <property>engines/engine[0]/cranking</property>
+    </condition>
+    <offsets>
+      <x-m> -5.93 </x-m>
+      <y-m> -3.36</y-m>
+      <z-m> 2.82 </z-m>
+      <heading-deg>20</heading-deg>
+      <pitch-deg>90</pitch-deg>
+      <roll-deg>0</roll-deg>
+    </offsets>
   </model>
 
  <!-- start up smoke engine 2 left -->
   
   <model>
     <path>Aircraft/BristolFreighter/Models/Effects/cranking/smoke2.xml</path>
-        <condition>
-            <property>engines/engine[1]/cranking</property>
-        </condition>
-       <offsets>
-         <x-m> -5.93 </x-m>
-         <y-m> 3.36 </y-m>
-         <z-m> 3.92 </z-m>
-         <heading-deg>-20</heading-deg>
-         <pitch-deg>80</pitch-deg>
-         <roll-deg>0</roll-deg>
-       </offsets>
+    <condition>
+          <property>engines/engine[1]/cranking</property>
+    </condition>
+    <offsets>
+      <x-m> -5.93 </x-m>
+      <y-m> 3.36 </y-m>
+      <z-m> 3.92 </z-m>
+      <heading-deg>-20</heading-deg>
+      <pitch-deg>80</pitch-deg>
+      <roll-deg>0</roll-deg>
+    </offsets>
   </model>
   
   <model>
     <path>Aircraft/BristolFreighter/Models/Effects/cranking/smoke2.xml</path>
-        <condition>
-            <property>engines/engine[1]/cranking</property>
-        </condition>
-       <offsets>
-         <x-m> -5.93 </x-m>
-         <y-m> 3.36 </y-m>
-         <z-m> 2.82 </z-m>
-         <heading-deg>-20</heading-deg>
-         <pitch-deg>90</pitch-deg>
-         <roll-deg>0</roll-deg>
-       </offsets>
+    <condition>
+          <property>engines/engine[1]/cranking</property>
+    </condition>
+    <offsets>
+      <x-m> -5.93 </x-m>
+      <y-m> 3.36 </y-m>
+      <z-m> 2.82 </z-m>
+      <heading-deg>-20</heading-deg>
+      <pitch-deg>90</pitch-deg>
+      <roll-deg>0</roll-deg>
+    </offsets>
   </model>
 
  <!-- start up smoke engine 2 right -->
   
   <model>
-    <path>Aircraft/BristolFreighter/Models/Effects/cranking/smoke2.xml</path>
-        <condition>
-            <property>engines/engine[1]/cranking</property>
-        </condition>
-       <offsets>
-         <x-m> -5.93 </x-m>
-         <y-m> 4.45 </y-m>
-         <z-m> 3.92 </z-m>
-         <heading-deg>20</heading-deg>
-         <pitch-deg>80</pitch-deg>
-         <roll-deg>0</roll-deg>
-       </offsets>
+  <path>Aircraft/BristolFreighter/Models/Effects/cranking/smoke2.xml</path>
+    <condition>
+          <property>engines/engine[1]/cranking</property>
+    </condition>
+    <offsets>
+      <x-m> -5.93 </x-m>
+      <y-m> 4.45 </y-m>
+      <z-m> 3.92 </z-m>
+      <heading-deg>20</heading-deg>
+      <pitch-deg>80</pitch-deg>
+      <roll-deg>0</roll-deg>
+    </offsets>
   </model>
   
   <model>
-    <path>Aircraft/BristolFreighter/Models/Effects/cranking/smoke2.xml</path>
-        <condition>
-            <property>engines/engine[1]/cranking</property>
-        </condition>
-       <offsets>
-         <x-m> -5.93 </x-m>
-         <y-m> 4.45 </y-m>
-         <z-m> 2.82 </z-m>
-         <heading-deg>20</heading-deg>
-         <pitch-deg>90</pitch-deg>
-         <roll-deg>0</roll-deg>
-       </offsets>
+  <path>Aircraft/BristolFreighter/Models/Effects/cranking/smoke2.xml</path>
+    <condition>
+          <property>engines/engine[1]/cranking</property>
+    </condition>
+    <offsets>
+      <x-m> -5.93 </x-m>
+      <y-m> 4.45 </y-m>
+      <z-m> 2.82 </z-m>
+      <heading-deg>20</heading-deg>
+      <pitch-deg>90</pitch-deg>
+      <roll-deg>0</roll-deg>
+    </offsets>
   </model>
-  
+
 </PropertyList>
 

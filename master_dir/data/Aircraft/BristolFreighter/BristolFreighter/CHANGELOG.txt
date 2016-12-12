@@ -4,7 +4,7 @@ Bristol 170 Freighter Mk.31
 
 Revision Summary:
 
-December 2016	osmith	Release 20161218.01
+20161210.01    osmith - initial release
 ***************************************************************************************
 
 Next Release
@@ -16,8 +16,7 @@ Next Release
 - clean-up nose door mesh
 
 
-
-Version: 20161218.01
+Version: 20161210.01
 ====================
 
 Status: ALPHA
