@@ -44,9 +44,9 @@
       <mode>looped</mode>
       <path>Aircraft/BristolFreighter/Sounds/engine_crank.wav</path>
       <condition>
-        <property>engines/engine[0]/cranking</property>
+        <property>/engines/engine[0]/cranking</property>
         <not>
-          <property>engines/engine[0]/running</property>
+          <property>/engines/engine[0]/running</property>
         </not>
       </condition>
       <volume>
@@ -94,22 +94,22 @@
       <path>Aircraft/BristolFreighter/Sounds/engine_idle.wav</path>
       <condition>
         <and>
-          <property>engines/engine[0]/running</property>
+          <property>/engines/engine[0]/running</property>
           <less-than>
-            <property>engines/engine[0]/rpm</property>
+            <property>/engines/engine[0]/rpm</property>
             <value>1700</value>
           </less-than>
         </and>
       </condition>
       <volume>
-          <property>engines/engine[0]/mp-osi</property>
+          <property>/engines/engine[0]/mp-osi</property>
           <factor>0.009</factor>
           <min>0.15</min>
           <max>0.6</max>
           <offset>0.15</offset>
       </volume>
       <pitch>
-          <property>engines/engine[0]/rpm</property>
+          <property>/engines/engine[0]/rpm</property>
           <factor>0.0004</factor>
           <min>0.1</min>
           <max>2.0</max>
@@ -184,7 +184,7 @@
         </and>
       </condition>
       <volume>
-        <property>engines/engine[0]/mp-osi</property>
+        <property>/engines/engine[0]/mp-osi</property>
         <factor>0.00375</factor>
         <min>0.5</min>
         <max>2.0</max>
@@ -218,7 +218,7 @@
         </and>
       </condition>
       <volume>
-        <property>engines/engine[0]/mp-osi</property>
+        <property>/engines/engine[0]/mp-osi</property>
         <factor>0.00375</factor>
         <min>0.5</min>
         <max>2.0</max>
@@ -250,7 +250,7 @@
         </and>
       </condition>
       <volume>
-        <property>engines/engine[0]/mp-osi</property>
+        <property>/engines/engine[0]/mp-osi</property>
         <factor>0.04</factor>
         <min>0.5</min>
         <max>2.0</max>
@@ -293,7 +293,7 @@
         </and>
       </condition>
       <volume>
-        <property>engines/engine[0]/mp-osi</property>
+        <property>/engines/engine[0]/mp-osi</property>
         <factor>0.4</factor>
         <min>0.5</min>
         <max>2.0</max>
@@ -367,9 +367,9 @@
       <mode>looped</mode>
       <path>Aircraft/BristolFreighter/Sounds/engine_crank.wav</path>
       <condition>
-        <property>engines/engine[1]/cranking</property>
+        <property>/engines/engine[1]/cranking</property>
         <not>
-          <property>engines/engine[1]/running</property>
+          <property>/engines/engine[1]/running</property>
         </not>
       </condition>
       <volume>
@@ -415,22 +415,22 @@
       <path>Aircraft/BristolFreighter/Sounds/engine_idle.wav</path>
       <condition>
         <and>
-          <property>engines/engine[1]/running</property>
+          <property>/engines/engine[1]/running</property>
           <less-than>
-            <property>engines/engine[1]/rpm</property>
+            <property>/engines/engine[1]/rpm</property>
             <value>1700</value>
           </less-than>
         </and>
       </condition>
       <volume>
-        <property>engines/engine[1]/mp-osi</property>
+        <property>/engines/engine[1]/mp-osi</property>
         <factor>0.009</factor>
         <min>0.15</min>
         <max>0.6</max>
         <offset>0.15</offset>
       </volume>
       <pitch>
-        <property>engines/engine[1]/rpm</property>
+        <property>/engines/engine[1]/rpm</property>
         <factor>0.0004</factor>
         <min>0.1</min>
         <max>2.0</max>
@@ -502,7 +502,7 @@
         </and>
       </condition>
       <volume>
-        <property>engines/engine[1]/mp-osi</property>
+        <property>/engines/engine[1]/mp-osi</property>
         <factor>0.00375</factor>
         <min>0.5</min>
         <max>2.0</max>
@@ -536,7 +536,7 @@
         </and>
       </condition>
       <volume>
-        <property>engines/engine[1]/mp-osi</property>
+        <property>/engines/engine[1]/mp-osi</property>
         <factor>0.00375</factor>
         <min>0.5</min>
         <max>2.0</max>
@@ -568,7 +568,7 @@
         </and>
       </condition>
       <volume>
-        <property>engines/engine[1]/mp-osi</property>
+        <property>/engines/engine[1]/mp-osi</property>
         <factor>0.00375</factor>
         <min>0.5</min>
         <max>2.0</max>
@@ -611,7 +611,7 @@
         </and>
       </condition>
       <volume>
-        <property>engines/engine[1]/mp-osi</property>
+        <property>/engines/engine[1]/mp-osi</property>
         <factor>0.5</factor>
         <min>0.5</min>
         <max>2.0</max>
@@ -700,7 +700,7 @@
       <name>flaps</name>
       <mode>in-transit</mode>
       <path>Aircraft/BristolFreighter/Sounds/flaps.wav</path>
-      <property>surface-positions/flap-pos-norm</property>
+      <property>/surface-positions/flap-pos-norm</property>
       <volume>
         <max>1</max>
       </volume>
@@ -713,18 +713,18 @@
       <path>Sounds/squeal.wav</path>
       <condition>
         <or>
-          <property>gear/gear[0]/wow</property>
-          <property>gear/gear[1]/wow</property>
-          <property>gear/gear[2]/wow</property>
-          <property>gear/gear[3]/wow</property>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+          <property>/gear/gear[3]/wow</property>
         </or>
       </condition>
       <volume>
-        <property>velocities/speed-down-fps</property>
+        <property>/velocities/speed-down-fps</property>
         <factor>0.05</factor>
       </volume>
       <volume>
-        <property>velocities/groundspeed-kt</property>
+        <property>/velocities/groundspeed-kt</property>
         <factor>0.01</factor>
       </volume>
       <volume>
@@ -733,7 +733,7 @@
         <max>1.0</max>
       </volume>
       <pitch>
-        <property>velocities/groundspeed-kt</property>
+        <property>/velocities/groundspeed-kt</property>
         <factor>0.0025</factor>
         <offset>1.2</offset>
       </pitch>
@@ -768,7 +768,7 @@
       <name>clickOn</name>
       <path>Sounds/click.wav</path>
       <condition>
-        <property>sim/model/sound/click</property>
+        <property>/sim/model/sound/click</property>
       </condition>
       <volume> 
         <factor>1.0</factor>
@@ -779,7 +779,7 @@
       <name>clickOff</name>
       <path>Sounds/click.wav</path>
       <condition>
-        <not><property>sim/model/sound/click</property></not>
+        <not><property>/sim/model/sound/click</property></not>
       </condition>
       <volume> 
         <factor>1.0</factor>

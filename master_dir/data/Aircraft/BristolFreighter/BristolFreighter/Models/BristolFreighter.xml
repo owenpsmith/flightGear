@@ -6,6 +6,20 @@
     <path>Aircraft/BristolFreighter/Models/BristolFreighter.ac</path>
   </model>
 
+  <nasal>
+    <load>
+      
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);      
+      var crew_door = self.getNode("/instrumentation/doors/crew/position-norm", 1);      
+      crew_door.alias(float_0);
+      
+    </load>
+
+    <unload>
+      crew_door.unalias();
+    </unload>
+  </nasal>
+  
   <model>
     <name>Instruments</name>
     <path>Aircraft/BristolFreighter/Models/instruments.xml</path>
@@ -36,6 +50,7 @@
 
   <animation>
     <type>rotate</type>
+    <object-name>tailGear</object-name>
     <object-name>tailWheel</object-name>
     <property>gear/gear[2]/caster-angle-deg</property>
     <factor>1</factor>
@@ -48,6 +63,58 @@
       <z2-m>2.39904</z2-m>
     </axis>
   </animation>
+  
+  <animation>
+    <type>spin</type>
+    <object-name>tailWheel</object-name>
+    <property>sim/multiplay/generic/float[15]</property>
+    <factor>-29.4</factor>
+    <center>
+      <x-m> 9.412 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 1.993 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>spin</type>
+    <object-name>mainWheelL</object-name>
+    <property>sim/multiplay/generic/float[13]</property>
+    <factor>-14.8</factor>
+    <center>
+      <x-m> -4.877 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.724 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>spin</type>
+    <object-name>mainWheelR</object-name>
+    <property>sim/multiplay/generic/float[14]</property>
+    <factor>-14.8</factor>
+    <center>
+      <x-m> -4.877 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.724 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+ 
 
   <!-- *** Elevators -->
   <animation>
@@ -207,7 +274,7 @@
     <object-name>noseDoorL_brace</object-name>
     <object-name>noseDoorL_hinges</object-name>
     <object-name>noseDoorL_transparent</object-name>
-    <property>instrumentation/doors/noseDoors/position-norm</property>
+    <property>sim/multiplay/generic/float[0]</property>
     <factor>-90</factor>
     <axis>
       <x1-m> -8.010 </x1-m>
@@ -227,7 +294,7 @@
     <object-name>noseDoorR_brace</object-name>
     <object-name>noseDoorR_hinges</object-name>
     <object-name>noseDoorR_transparent</object-name>
-    <property>instrumentation/doors/noseDoors/position-norm</property>
+    <property>sim/multiplay/generic/float[0]</property>
     <factor>90</factor>
     <axis>
       <x1-m> -8.010 </x1-m>

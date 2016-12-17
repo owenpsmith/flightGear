@@ -128,6 +128,22 @@
         <z-offset-m alias="/sim/chase-distance-m"/>
       </config>
     </view>
+    
+    <systems>
+      <autopilot>
+        <name>Autopilot</name>
+        <path>Nasal/AN-12BK-autopilot.xml</path>
+      </autopilot>
+    </systems>
+    
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <float n="13" alias="/gear/gear[0]/rollspeed-ms" />
+        <float n="14" alias="/gear/gear[1]/rollspeed-ms" />
+        <float n="15" alias="/gear/gear[2]/rollspeed-ms" />
+      </generic>
+    </multiplay>  
 
   </sim>
 
