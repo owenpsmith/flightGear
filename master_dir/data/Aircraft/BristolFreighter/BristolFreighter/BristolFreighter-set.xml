@@ -142,6 +142,7 @@
         <float n="13" alias="/gear/gear[0]/rollspeed-ms" />
         <float n="14" alias="/gear/gear[1]/rollspeed-ms" />
         <float n="15" alias="/gear/gear[2]/rollspeed-ms" />
+        <float n="16" alias="/sim/model/door-positions/nose/position-norm"/>
       </generic>
     </multiplay>  
 
@@ -157,7 +158,7 @@
         <desc>Toggle Nose Doors</desc>
         <binding>
           <command>nasal</command>
-          <script>BristolFreighter.doorSystem.toggleNoseDoors()</script>
+          <script>BristolFreighter.noseDoor.toggle();</script>
         </binding>
       </key>
 

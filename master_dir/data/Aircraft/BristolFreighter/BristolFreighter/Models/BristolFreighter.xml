@@ -2,21 +2,19 @@
 
 <PropertyList>
 
-  <model>
-    <path>Aircraft/BristolFreighter/Models/BristolFreighter.ac</path>
-  </model>
+    <path>BristolFreighter.ac</path>
 
   <nasal>
     <load>
       
-      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);      
-      var crew_door = self.getNode("/instrumentation/doors/crew/position-norm", 1);      
-      crew_door.alias(float_0);
+      var float_16 = self.getNode("sim/multiplay/generic/float[16]", 1);      
+      var nose_door = self.getNode("/instrumentation/doors/nose/position-norm", 1);      
+      nose_door.alias(float_16);
       
     </load>
 
     <unload>
-      crew_door.unalias();
+      nose_door.unalias();
     </unload>
   </nasal>
   
@@ -28,6 +26,17 @@
   <model>
     <path>Aircraft/BristolFreighter/Models/Effects/cranking.xml</path>
   </model>
+
+    <!-- Mark transparent surfaces for Rembrandt -->
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propBlur4R</object-name>
+    <object-name>propBlur4L</object-name>
+    <object-name>fuselageTransparent</object-name>
+    <object-name>noseDoorR_transparent</object-name>
+    <object-name>noseDoorL_transparent</object-name>
+  </effect>
 
   <!-- *** Rudder -->
   <animation>
@@ -46,7 +55,7 @@
   </animation>
   
   
-    <!-- *** Tail wheel -->
+    <!-- *** Landing Gear -->
 
   <animation>
     <type>rotate</type>
@@ -274,7 +283,7 @@
     <object-name>noseDoorL_brace</object-name>
     <object-name>noseDoorL_hinges</object-name>
     <object-name>noseDoorL_transparent</object-name>
-    <property>sim/multiplay/generic/float[0]</property>
+    <property>sim/multiplay/generic/float[16]</property>
     <factor>-90</factor>
     <axis>
       <x1-m> -8.010 </x1-m>
@@ -294,7 +303,7 @@
     <object-name>noseDoorR_brace</object-name>
     <object-name>noseDoorR_hinges</object-name>
     <object-name>noseDoorR_transparent</object-name>
-    <property>sim/multiplay/generic/float[0]</property>
+    <property>sim/multiplay/generic/float[16]</property>
     <factor>90</factor>
     <axis>
       <x1-m> -8.010 </x1-m>
