@@ -16,6 +16,27 @@ Next Release
 - clean-up nose door mesh
 
 
+Version: 20180130.02
+====================
+
+Status: ALPHA
+
+Rating:
+    - FDM     - 1
+    - Systems - 1
+    - cockpit - 1
+    - model   - 2
+
+- Basic but stable FDM
+- Basic but accurate 3D model includes cockpit windows, basic cargo bay details, and animated nose doors
+- Animated ailerons, elevators, rudder and flaps
+- Basic landing gear, animated tail wheel castering
+- Two stage prop animations for low and high RPMs
+- Basic stock 3D instruments on a basic flat panel in otherwise empty cockpit
+- Sounds plugged in from Douglas-Dc3 aircraft, needs refinement
+- Cranking smoke effects
+
+
 Version: 20161210.01
 ====================
 

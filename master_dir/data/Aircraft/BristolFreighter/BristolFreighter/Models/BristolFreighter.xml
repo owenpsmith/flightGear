@@ -11,16 +11,26 @@
       var nose_door = self.getNode("/instrumentation/doors/nose/position-norm", 1);      
       nose_door.alias(float_16);
       
+      var float_17 = self.getNode("sim/multiplay/generic/float[17]", 1);      
+      var rear_door = self.getNode("/instrumentation/doors/rear/position-norm", 1);      
+      rear_door.alias(float_17);
+      
     </load>
 
     <unload>
       nose_door.unalias();
+      rear_door.unalias();
     </unload>
   </nasal>
   
   <model>
-    <name>Instruments</name>
-    <path>Aircraft/BristolFreighter/Models/instruments.xml</path>
+    <name>Cockpit</name>
+    <path>Models/Cockpit/cockpit.xml</path>
+    <offsets>
+      <x-m>-6.90105</x-m>  <!-- Back  (AC3D X)  -->
+	  <y-m>0</y-m>   <!-- Right (AC3D -Z) -->
+	  <z-m>3.974</z-m>    <!-- Up    (AC3D Y)  -->   
+	</offsets>
   </model>
 
   <model>
@@ -33,9 +43,11 @@
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>propBlur4R</object-name>
     <object-name>propBlur4L</object-name>
-    <object-name>fuselageTransparent</object-name>
-    <object-name>noseDoorR_transparent</object-name>
-    <object-name>noseDoorL_transparent</object-name>
+    <object-name>cockpitWindows</object-name>
+    <object-name>cargoBayWindows</object-name>
+    <object-name>noseDoorRWindows</object-name>
+    <object-name>noseDoorLWindows</object-name>
+    <object-name>rearDoorWindow</object-name>
   </effect>
 
   <!-- *** Rudder -->
@@ -45,18 +57,12 @@
     <property>surface-positions/rudder-pos-norm</property>
     <factor>-28</factor>
     <axis>
-      <x1-m>8.753</x1-m>   <!-- back -->
-      <y1-m>0.0  </y1-m>   <!-- left/right -->
-      <z1-m>5.734</z1-m>   <!-- Up -->
-      <x2-m>8.716</x2-m>
-      <y2-m>0.0  </y2-m>
-      <z2-m>7.826</z2-m>
+      <object-name>rudder_AXIS</object-name>
     </axis>
   </animation>
   
   
     <!-- *** Landing Gear -->
-
   <animation>
     <type>rotate</type>
     <object-name>tailGear</object-name>
@@ -64,46 +70,27 @@
     <property>gear/gear[2]/caster-angle-deg</property>
     <factor>1</factor>
     <axis>
-      <x1-m>8.98714</x1-m>
-      <y1-m>0.0  </y1-m>
-      <z1-m>2.06813</z1-m>
-      <x2-m>8.94891</x2-m>
-      <y2-m>0.0  </y2-m>
-      <z2-m>2.39904</z2-m>
+      <object-name>tailGear_AXIS</object-name>
     </axis>
   </animation>
-  
+
   <animation>
     <type>spin</type>
     <object-name>tailWheel</object-name>
     <property>sim/multiplay/generic/float[15]</property>
     <factor>-29.4</factor>
-    <center>
-      <x-m> 9.412 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 1.993 </z-m>
-    </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <object-name>tailWheel_AXIS</object-name>
     </axis>
   </animation>
-  
+
   <animation>
     <type>spin</type>
     <object-name>mainWheelL</object-name>
     <property>sim/multiplay/generic/float[13]</property>
-    <factor>-14.8</factor>
-    <center>
-      <x-m> -4.877 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 0.724 </z-m>
-    </center>
+    <factor>14.8</factor>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <object-name>mainWheelL_AXIS</object-name>
     </axis>
   </animation>
  
@@ -111,19 +98,11 @@
     <type>spin</type>
     <object-name>mainWheelR</object-name>
     <property>sim/multiplay/generic/float[14]</property>
-    <factor>-14.8</factor>
-    <center>
-      <x-m> -4.877 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 0.724 </z-m>
-    </center>
+    <factor>14.8</factor>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <object-name>mainWheelR_AXIS</object-name>
     </axis>
   </animation>
- 
 
   <!-- *** Elevators -->
   <animation>
@@ -144,15 +123,8 @@
         <dep>-17.0</dep>
       </entry>
     </interpolation>    
-    <center>
-      <x-m> 9.140 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 3.154 </z-m>
-    </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <object-name>elevators_AXIS</object-name>
     </axis>
   </animation>
 
@@ -163,8 +135,8 @@
     <property>surface-positions/left-aileron-pos-norm</property>
     <interpolation>
       <entry>
-        <ind> 1.0</ind>
-        <dep> 19.0</dep>
+        <ind>1.0</ind>
+        <dep> 15.0</dep>
       </entry>
       <entry>
         <ind>0.0</ind>
@@ -172,16 +144,11 @@
       </entry>
       <entry>
         <ind>-1.0</ind>
-        <dep>-15.0</dep>
+        <dep>-19.0</dep>
       </entry>
     </interpolation>    
     <axis>
-      <x1-m>  -0.832 </x1-m>
-      <y1-m> -13.860 </y1-m>
-      <z1-m>   4.224 </z1-m>
-      <x2-m>  -0.832 </x2-m>
-      <y2-m>  -8.457 </y2-m>
-      <z2-m>   4.019 </z2-m>
+      <object-name>aileronL_AXIS</object-name>
     </axis>
   </animation>
   
@@ -191,25 +158,20 @@
     <property>surface-positions/right-aileron-pos-norm</property>
     <interpolation>
       <entry>
-        <ind> 1.0</ind>
-        <dep> 19.0</dep>
+        <ind>-1.0</ind>
+        <dep>19.0</dep>
       </entry>
       <entry>
         <ind>0.0</ind>
         <dep>0.0</dep>
       </entry>
       <entry>
-        <ind>-1.0</ind>
+        <ind>1.0</ind>
         <dep>-15.0</dep>
       </entry>
     </interpolation>    
     <axis>
-      <x1-m> -0.832 </x1-m>
-      <y1-m>  8.457 </y1-m>
-      <z1-m>  4.019 </z1-m>
-      <x2-m> -0.832 </x2-m>
-      <y2-m> 13.860 </y2-m>
-      <z2-m>  4.224 </z2-m>
+      <object-name>aileronR_AXIS</object-name>
     </axis>
   </animation>
 
@@ -220,12 +182,7 @@
     <property>surface-positions/flap-pos-norm</property>
     <factor>60</factor>
     <axis>
-      <x1-m> -1.100 </x1-m>
-      <y1-m> -8.337 </y1-m>
-      <z1-m>  3.815 </z1-m>
-      <x2-m> -1.100 </x2-m>
-      <y2-m> -4.704 </y2-m>
-      <z2-m>  3.652 </z2-m>
+      <object-name>flapOuterL_AXIS</object-name>
     </axis>
   </animation>
 
@@ -235,12 +192,7 @@
     <property>surface-positions/flap-pos-norm</property>
     <factor>60</factor>
     <axis>
-      <x1-m> -1.108 </x1-m>
-      <y1-m> -4.566 </y1-m>
-      <z1-m>  3.650 </z1-m>
-      <x2-m> -1.108 </x2-m>
-      <y2-m> -1.393 </y2-m>
-      <z2-m>  3.650 </z2-m>
+      <object-name>flapInnerL_AXIS</object-name>
     </axis>
   </animation>
 
@@ -248,14 +200,9 @@
     <type>rotate</type>
     <object-name>flapInnerR</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor>60</factor>
+    <factor>-60</factor>
     <axis>
-      <x1-m> -1.108 </x1-m>
-      <y1-m>  1.393 </y1-m>
-      <z1-m>  3.650 </z1-m>
-      <x2-m> -1.108 </x2-m>
-      <y2-m>  4.566 </y2-m>
-      <z2-m>  3.650 </z2-m>
+      <object-name>flapInnerR_AXIS</object-name>
     </axis>
   </animation>
 
@@ -263,57 +210,83 @@
     <type>rotate</type>
     <object-name>flapOuterR</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor>60</factor>
+    <factor>-60</factor>
     <axis>
-      <x1-m> -1.100 </x1-m>
-      <y1-m>  4.704 </y1-m>
-      <z1-m>  3.652 </z1-m>
-      <x2-m> -1.100 </x2-m>
-      <y2-m>  8.337 </y2-m>
-      <z2-m>  3.815 </z2-m>
+      <object-name>flapOuterR_AXIS</object-name>
     </axis>
   </animation>
   
   <!-- *** Nose doors -->
   <animation>
+    <name>Nose door pick</name>
+    <type>pick</type>
+    <object-name>noseDoorL</object-name>
+    <object-name>noseDoorLInt</object-name>
+    <object-name>noseDoorLWindows</object-name>
+    <object-name>noseDoorR</object-name>
+    <object-name>noseDoorRInt</object-name>
+    <object-name>noseDoorRWindows</object-name>
+    <action>
+      <button>0</button>
+      <repeatable type="bool">false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>BristolFreighter.noseDoor.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>noseDoorL</object-name>
-    <object-name>noseDoorL_interior</object-name>
-    <object-name>noseDoorL_framework</object-name>
-    <object-name>noseDoorL_brace</object-name>
-    <object-name>noseDoorL_hinges</object-name>
-    <object-name>noseDoorL_transparent</object-name>
+    <object-name>noseDoorLInt</object-name>
+    <object-name>noseDoorLWindows</object-name>
     <property>sim/multiplay/generic/float[16]</property>
     <factor>-90</factor>
     <axis>
-      <x1-m> -8.010 </x1-m>
-      <y1-m> -1.355 </y1-m>
-      <z1-m>  3.250 </z1-m>
-      <x2-m> -8.010 </x2-m>
-      <y2-m> -1.355 </y2-m>
-      <z2-m>  1.430 </z2-m>
+      <object-name>noseDoorL_AXIS</object-name>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>noseDoorR</object-name>
-    <object-name>noseDoorR_interior</object-name>
-    <object-name>noseDoorR_framework</object-name>
-    <object-name>noseDoorR_brace</object-name>
-    <object-name>noseDoorR_hinges</object-name>
-    <object-name>noseDoorR_transparent</object-name>
+    <object-name>noseDoorRInt</object-name>
+    <object-name>noseDoorRWindows</object-name>
     <property>sim/multiplay/generic/float[16]</property>
     <factor>90</factor>
     <axis>
-      <x1-m> -8.010 </x1-m>
-      <y1-m>  1.355 </y1-m>
-      <z1-m>  3.250 </z1-m>
-      <x2-m> -8.010 </x2-m>
-      <y2-m>  1.355 </y2-m>
-      <z2-m>  1.430 </z2-m>
+      <object-name>noseDoorR_AXIS</object-name>
     </axis>
   </animation>  
+  
+  
+  <!-- *** Rear cargo door -->
+  <animation>
+    <name>Rear door pick</name>
+    <type>pick</type>
+    <object-name>rearDoor</object-name>
+    <object-name>rearDoorWindow</object-name>
+    <action>
+      <button>0</button>
+      <repeatable type="bool">false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>BristolFreighter.rearDoor.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>rearDoor</object-name>
+    <object-name>rearDoorWindow</object-name>
+    <property>sim/multiplay/generic/float[17]</property>
+    <factor>180</factor>
+    <axis>
+      <object-name>rearDoor_AXIS</object-name>
+    </axis>
+  </animation>
   
   
   <!-- *** Props -->
@@ -337,17 +310,10 @@
       </and> 
     </condition> 
 	<property>engines/engine[0]/rpm</property>
-    <factor>0.444</factor>
+    <factor>-0.444</factor>
     <axis>
-      <x> 1.0 </x>
-      <y> 0.0 </y>
-      <z> 0.0 </z>
+      <object-name>propL_AXIS</object-name>
     </axis>
-    <center>
-      <x-m> 7.324</x-m>
-      <y-m>-3.907</y-m>
-      <z-m> 3.413</z-m>
-    </center>  
   </animation>
 
   <animation>
@@ -394,17 +360,10 @@
       </and> 
     </condition> 
 	<property>engines/engine[1]/rpm</property>
-    <factor>0.444</factor>
+    <factor>-0.444</factor>
     <axis>
-      <x> 1.0 </x>
-      <y> 0.0 </y>
-      <z> 0.0 </z>
+      <object-name>propR_AXIS</object-name>
     </axis>
-    <center>
-      <x-m> 7.324</x-m>
-      <y-m> 3.907</y-m>
-      <z-m> 3.413</z-m>
-    </center>  
   </animation>
 
   <animation>
@@ -432,95 +391,6 @@
     </condition>
   </animation>
   
-    <!-- Control wheels -->
-  <animation>
-    <type>rotate</type>
-    <object-name>wheelPilot</object-name>
-    <property>controls/flight/aileron</property>
-    <interpolation>
-      <entry>
-        <ind> 1.0</ind>
-        <dep> 90.0</dep>
-      </entry>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>-1.0</ind>
-        <dep>-90.0</dep>
-      </entry>
-    </interpolation>    
-    <axis>
-      <x1-m>  -8.31453 </x1-m>
-      <y1-m>  -0.63</y1-m>
-      <z1-m>   4.47909 </z1-m>
-      <x2-m>  -8.36005 </x2-m>
-      <y2-m>  -0.63 </y2-m>
-      <z2-m>   4.47909 </z2-m>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>wheelCopilot</object-name>
-    <property>controls/flight/aileron</property>
-    <interpolation>
-      <entry>
-        <ind> 1.0</ind>
-        <dep> 90.0</dep>
-      </entry>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>-1.0</ind>
-        <dep>-90.0</dep>
-      </entry>
-    </interpolation>    
-    <axis>
-      <x1-m>  -8.31453 </x1-m>
-      <y1-m>   0.50</y1-m>
-      <z1-m>   4.47909 </z1-m>
-      <x2-m>  -8.36005 </x2-m>
-      <y2-m>   0.50 </y2-m>
-      <z2-m>   4.47909 </z2-m>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>yokePilot</object-name>
-    <object-name>wheelPilot</object-name>
-    <object-name>yokeCopilot</object-name>
-    <object-name>wheelCopilot</object-name>
-    <property>controls/flight/elevator</property>
-    <interpolation>
-      <entry>
-        <ind> 1.0</ind>
-        <dep> 6.0</dep>
-      </entry>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>-1.0</ind>
-        <dep>-6.0</dep>
-      </entry>
-    </interpolation>    
-    <axis>
-      <x1-m>  -8.340 </x1-m>
-      <y1-m>   0.6775</y1-m>
-      <z1-m>   3.50 </z1-m>
-      <x2-m>  -8.340 </x2-m>
-      <y2-m>  -0.5475 </y2-m>
-      <z2-m>   3.50 </z2-m>
-    </axis>
-  </animation>
-
-
   
 </PropertyList>
 

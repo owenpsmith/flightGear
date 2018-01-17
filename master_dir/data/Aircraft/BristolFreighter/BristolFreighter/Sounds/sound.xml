@@ -171,7 +171,7 @@
 
 
 
-    <engine>
+<!--    <engine>
       <name>engineLeft</name>
       <mode>looped</mode>
       <path>Aircraft/BristolFreighter/Sounds/engine_running_ext_1.wav</path>
@@ -238,8 +238,8 @@
         <z>0.021</z>
       </position>
     </engine>
-
-    <propellerhigh>
+-->
+<!--    <propellerhigh>
       <name>propellerhighLeft</name>
       <mode>looped</mode>
       <path>Aircraft/BristolFreighter/Sounds/engine_running_int_1.wav</path>
@@ -255,7 +255,7 @@
         <min>0.5</min>
         <max>2.0</max>
       </volume>
-      <!--
+-->      <!--
       <volume>
       <property>/orientation/alpha-deg</property>
       <type>log</type>
@@ -266,7 +266,7 @@
       <property>/sim/current-view/internal</property>
       <factor>0.5</factor>
       </volume>-->
-       <pitch>
+<!--       <pitch>
         <property>/engines/engine[0]/rpm</property>
         <factor>0.000226</factor>
         <min>0.15</min>
@@ -298,7 +298,7 @@
         <min>0.5</min>
         <max>2.0</max>
       </volume>
-      <!--
+-->      <!--
       <volume>
       <property>/orientation/alpha-deg</property>
       <type>log</type>
@@ -310,7 +310,7 @@
       <factor>0.5</factor>
       </volume>
       -->
-      <pitch>
+<!--      <pitch>
         <property>/engines/engine[0]/rpm</property>
         <factor>0.0007462</factor>
         <min>0.5</min>
@@ -325,7 +325,7 @@
         <z>0.021</z>
       </position>
     </propellerlow>
-
+-->
     <crank>
       <name>engstart2</name>
       <path>Aircraft/BristolFreighter/Sounds/engine_crank.wav</path>
@@ -494,6 +494,9 @@
       <mode>looped</mode>
       <path>Aircraft/BristolFreighter/Sounds/engine_running_ext_1.wav</path>
       <condition>
+          <property>/engines/engine[1]/running</property>
+      </condition>
+<!--      <condition>
         <and>
           <property>/engines/engine[1]/running</property>
           <not>
@@ -501,7 +504,7 @@
           </not>
         </and>
       </condition>
-      <volume>
+-->      <volume>
         <property>/engines/engine[1]/mp-osi</property>
         <factor>0.00375</factor>
         <min>0.5</min>
@@ -528,6 +531,9 @@
       <mode>looped</mode>
       <path>Aircraft/BristolFreighter/Sounds/engine_running_ext_2.wav</path>
       <condition>
+          <property>/engines/engine[1]/running</property>
+      </condition>
+<!--      <condition>
         <and>
           <property>/engines/engine[1]/running</property>
           <not>
@@ -535,7 +541,7 @@
           </not>
         </and>
       </condition>
-      <volume>
+-->      <volume>
         <property>/engines/engine[1]/mp-osi</property>
         <factor>0.00375</factor>
         <min>0.5</min>

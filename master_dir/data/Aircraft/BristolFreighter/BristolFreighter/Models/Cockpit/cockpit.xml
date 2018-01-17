@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    <path>cockpit.ac</path>
+
+  
+  <model>
+    <name>Instruments</name>
+    <path>Aircraft/BristolFreighter/Models/Cockpit/instruments.xml</path>
+  </model>
+
+ 
+    <!-- Control wheels -->
+  <animation>
+    <type>rotate</type>
+    <object-name>yokePilot</object-name>
+    <object-name>wheelPilot</object-name>
+    <object-name>yokeCopilot</object-name>
+    <object-name>wheelCopilot</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <interpolation>
+      <entry>
+        <ind>1.0</ind>
+        <dep>-14.5</dep>
+      </entry>
+      <entry>
+        <ind>0.0</ind>
+        <dep>2.0</dep>
+      </entry>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>18.5</dep>
+      </entry>
+    </interpolation>    
+    <axis>
+      <object-name>yoke_AXIS</object-name>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>wheelPilot</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+    </interpolation>    
+    <axis>
+      <object-name>wheelPilot_AXIS</object-name>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>wheelCopilot</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+    </interpolation>    
+    <axis>
+      <object-name>wheelCoPilot_AXIS</object-name>
+    </axis>
+  </animation>
+
+
+    <!-- Engine controls -->
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle1</object-name>
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor>-55</factor>
+    <offset-deg>35</offset-deg>
+    <axis>
+      <object-name>throttle_AXIS</object-name>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle2</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <factor>-55</factor>
+    <offset-deg>35</offset-deg>
+    <axis>
+      <object-name>throttle_AXIS</object-name>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>prop1</object-name>
+    <property>controls/engines/engine[0]/propeller-pitch</property>
+    <factor>-55</factor>
+    <offset-deg>35</offset-deg>
+    <axis>
+      <object-name>throttle_AXIS</object-name>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>prop2</object-name>
+    <property>controls/engines/engine[1]/propeller-pitch</property>
+    <factor>-55</factor>
+    <offset-deg>35</offset-deg>
+    <axis>
+      <object-name>throttle_AXIS</object-name>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttleCutOff1</object-name>
+    <property>controls/engines/engine[0]/cutoff</property>
+    <factor>-55</factor>
+    <offset-deg>35</offset-deg>
+    <axis>
+      <object-name>throttle_AXIS</object-name>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttleCutOff2</object-name>
+    <property>controls/engines/engine[1]/cutoff</property>
+    <factor>-55</factor>
+    <offset-deg>35</offset-deg>
+    <axis>
+      <object-name>throttle_AXIS</object-name>
+    </axis>
+  </animation>
+  
+  <!-- Flap lever -->
+  <animation>
+    <type>rotate</type>
+    <object-name>flapLever</object-name>
+    <object-name>cylinder</object-name>
+    <property>controls/flight/flaps</property>
+    <factor>48</factor>
+    <axis>
+      <object-name>throttle_AXIS</object-name>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>flapLever</object-name>
+    <object-name>cylinder</object-name>
+    <property>controls/flight/flaps</property>
+    <factor>0.0025</factor>
+    <axis>
+      <object-name>throttle_AXIS</object-name>
+    </axis>
+  </animation>
+  
+  <!-- Parking brake -->  
+  <animation>
+    <type>translate</type>
+    <object-name>parkingBrake</object-name>
+    <property>controls/gear/brake-parking</property>
+    <factor>-0.35</factor>
+    <offset-m>0.35</offset-m>
+    <axis>
+      <object-name>parkingBrake_AXIS</object-name>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>Parking brake pick</name>
+    <type>pick</type>
+    <object-name>parkingBrake</object-name>
+    <action>
+      <button>0</button>
+      <repeatable type="bool">false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>controls.applyParkingBrake(1)</script>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>nasal</command>
+          <script>controls.applyParkingBrake(0)</script>
+        </binding>
+      </mod-up>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>parking brake: %s</label>
+        <measure-text>parking brake: Off</measure-text>
+        <tooltip-id>parkingBrake</tooltip-id>
+        <mapping>on-off</mapping>
+        <property>controls/gear/brake-parking</property>
+      </binding>
+    </hovered>
+  </animation>
+
+  <!-- Tailwheel lock -->  
+  <model>
+    <name>TailWheelLock</name>
+    <path>Models/Cockpit/Shared/switches/tailWheelLock.xml</path>
+    <offsets>
+      <x-m>-1.31011</x-m>     <!-- Back  (AC3D X)  -->
+      <y-m>-0.275125</y-m>    <!-- Right (AC3D -Z) -->
+      <z-m>0.365297</z-m>     <!-- Up    (AC3D Y)  -->
+      <pitch-deg>-73.13</pitch-deg>
+    </offsets>
+  </model>
+
+
+  
+</PropertyList>
+

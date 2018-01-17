@@ -78,6 +78,7 @@
       <control-output control="FLAP1" prop="/surface-positions/aileron-pos-norm"/>
 
       <control-speed control="FLAP0" transition-time="15"/>
+      <control-speed control="FLAP1" transition-time="1.0"/>
     </wing>
 
   <!-- Elevator -->
@@ -92,6 +93,7 @@
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
 
          <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+         <control-speed control="FLAP0" transition-time="1.0"/>
   </hstab>
 
   <!-- Rudder -->
@@ -107,70 +109,76 @@
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
 
          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+         <control-speed control="FLAP0" transition-time="1.0"/>
   </vstab>
 
 
   <!-- Engine left -->
   <propeller x="6.417" y="3.917" z="3.363"
-             radius="2.336"
              mass="2275"
              moment="-125"
-             cruise-power="1120"
-             cruise-alt="10000"
-             cruise-speed="145"
-             cruise-rpm="1065"
-             takeoff-rpm="1243"
-             takeoff-power="1980"
-             fine-stop="1.25"
-             coarse-stop="4.0"
+             radius="2.336"
+             gear-ratio="0.444"
              min-rpm="244"
              max-rpm="1243" 
-             gear-ratio="0.444">
+             takeoff-rpm="1243"
+             takeoff-power="1980"
+             coarse-stop="4.0"
+             fine-stop="1.25"
+             cruise-rpm="1065"
+             cruise-power="1120"
+             cruise-speed="145"
+             cruise-alt="10000">
              <actionpt x="7.208" y="3.917" z="3.363"/>
+             <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
              <piston-engine
                             eng-rpm="2800"
                             eng-power="1980"
-                            alt="0"
                             displacement="2360"
                             compression="7.0"
-                            supercharger="1"/>
-             <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
-             <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
-             <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
-             <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
-             <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
-             <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
+                            supercharger="1"
+                            turbo-mul="2.0"
+                            wastegate-mp="56.25">
+                            <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+                            <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+                            <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+                            <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+                            <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
+             </piston-engine>
   </propeller>
 
   <!-- Engine right-->
   <propeller x="6.417" y="-3.917" z="3.363"
-             radius="2.336"
              mass="2275"
              moment="-125"
-             cruise-power="1120"
-             cruise-alt="10000"
-             cruise-speed="145"
-             cruise-rpm="1065"
-             takeoff-power="1980"
-             takeoff-rpm="1243"
-             fine-stop="1.25"
-             coarse-stop="4.0"
+             radius="2.336"
+             gear-ratio="0.444"
              min-rpm="244"
              max-rpm="1243" 
-             gear-ratio="0.444">
+             takeoff-rpm="1243"
+             takeoff-power="1980"
+             coarse-stop="4.0"
+             fine-stop="1.25"
+             cruise-rpm="1065"
+             cruise-power="1120"
+             cruise-speed="145"
+             cruise-alt="10000">
              <actionpt x="7.208" y="-3.917" z="3.363"/>
+             <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE" />
              <piston-engine
                             eng-rpm="2800"
                             eng-power="1980"
-                            alt="0"
                             displacement="2360"
-                            compression="7.0"/>
-             <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
-             <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
-             <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
-             <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
-             <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
-             <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE" />
+                            compression="7.0"
+                            supercharger="1"
+                            turbo-mul="2.0"
+                            wastegate-mp="56.25">
+                            <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+                            <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
+                            <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
+                            <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
+                            <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
+             </piston-engine>
   </propeller>
 
 
@@ -208,12 +216,10 @@
   </gear>
 
   <!-- Fuel tanks left to right -->
-  <tank x="3.630" y=" 6.211" z="4.114" capacity="600"/>  <!-- Outer  left  -->
-  <tank x="3.630" y=" 5.144" z="4.114" capacity="816"/>  <!-- Middle left  -->
-  <tank x="3.630" y=" 2.222" z="4.114" capacity="2100"/> <!-- Inner  left  -->
-  <tank x="3.630" y="-2.222" z="4.114" capacity="2100"/> <!-- Inner  right -->
-  <tank x="3.630" y="-5.144" z="4.114" capacity="816"/>  <!-- Middle right -->
-  <tank x="3.630" y="-6.211" z="4.114" capacity="600"/>  <!-- Outer  right -->
+  <tank x="3.630" y=" 6.211" z="4.114" capacity="1912"/>  <!-- Outer  left  -->
+  <tank x="3.630" y=" 2.222" z="4.114" capacity="2452"/>  <!-- Inner  left  -->
+  <tank x="3.630" y="-2.222" z="4.114" capacity="2452"/>  <!-- Inner  right -->
+  <tank x="3.630" y="-6.211" z="4.114" capacity="1912"/>  <!-- Outer  right -->
 
   <!-- trim later if necessary -->
   <ballast x="10.0" y="0.0" z="0.0" mass="6000"/>

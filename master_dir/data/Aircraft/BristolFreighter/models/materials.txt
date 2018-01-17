@@ -1,0 +1,21 @@
+Fregither materials
+
+0  NONE
+1  Nose door framework
+2  NONE
+3  engine controls
+4  NONE
+5  NONE
+6  engine controls
+7  NONE
+8  NONE
+9  NONE
+10 NONE
+11 NONE
+12 NONE
+13 Control columns
+14 panels
+15 gear, fuselage int, nose door framework/brace
+16 most skin surfaces
+17 transparencies plus gear brace
+18 engine blockers

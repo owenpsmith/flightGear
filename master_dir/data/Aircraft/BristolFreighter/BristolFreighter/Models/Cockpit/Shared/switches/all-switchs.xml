@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+ 
+  <!-- Switchs -->
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.0220 </x-m>
+      <y-m> -0.2858 </y-m>
+      <z-m> -0.2352 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.02200 </x-m>
+      <y-m> -0.26154 </y-m>
+      <z-m> -0.23520 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.02200 </x-m>
+      <y-m> -0.19434 </y-m>
+      <z-m> -0.23520 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.02200 </x-m>
+      <y-m> -0.16923 </y-m>
+      <z-m> -0.23520 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+   <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.02200 </x-m>
+      <y-m> -0.12289 </y-m>
+      <z-m> -0.23520 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.02200 </x-m>
+      <y-m> -0.09849 </y-m>
+      <z-m> -0.23520 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.02200 </x-m>
+      <y-m> -0.07302 </y-m>
+      <z-m> -0.23520 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.02200 </x-m>
+      <y-m> -0.04579 </y-m>
+      <z-m> -0.23520 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.02200 </x-m>
+      <y-m> -0.02068 </y-m>
+      <z-m> -0.23520 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.022000 </x-m>
+      <y-m>  0.003729 </y-m>
+      <z-m> -0.235200 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.03960 </x-m>
+      <y-m> -0.12289 </y-m> <!-- -0.12445 -->
+      <z-m> -0.28051 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.03960 </x-m>
+      <y-m> -0.09849 </y-m> <!-- -0.09856 -->
+      <z-m> -0.28051 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.03960 </x-m>
+      <y-m> -0.07302 </y-m> <!-- -0.07182 -->
+      <z-m> -0.28051 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/switch.xml</path>
+    <offsets>
+      <x-m>  0.03960 </x-m>
+      <y-m> -0.04593 </y-m>
+      <z-m> -0.28051 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Curtiss-P40/Models/Interior/Panel/Instruments/switchs/starter.xml</path>
+    <offsets>
+      <x-m>  0.039600 </x-m>
+      <y-m> -0.004051 </y-m>
+      <z-m> -0.280510 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -21.5 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
+

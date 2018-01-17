@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Oil temp indicator -->
+<PropertyList> 
+
+  <path>oil.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/couzinet70/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission> 
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>engines/engine[2]/oil-temperature-degf</property>
+    <interpolation> 
+      <entry><ind>  32 </ind><dep> -42.5 </dep></entry>
+      <entry><ind>  68 </ind><dep> -30.0 </dep></entry>
+      <entry><ind> 140 </ind><dep>   0.0 </dep></entry>
+      <entry><ind> 176 </ind><dep>  10.0 </dep></entry>
+      <entry><ind> 212 </ind><dep>  25.0 </dep></entry>
+      <entry><ind> 248 </ind><dep>  42.5 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.00229331 </x-m>
+      <y-m>  0.00000000 </y-m>
+      <z-m> -0.01344000 </z-m>
+    </center>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

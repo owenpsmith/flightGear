@@ -6,13 +6,13 @@
 
     <description>Bristol 170 Freighter Mk.31</description>
     <author>Owen Smith</author>
-    <aircraft-version>20161210.01</aircraft-version>
+    <aircraft-version>20180130.02</aircraft-version>
 
     <status>alpha</status>
     <rating>
       <FDM     type="int"> 1 </FDM>
       <systems type="int"> 1 </systems>
-      <cockpit type="int"> 1 </cockpit>
+      <cockpit type="int"> 2 </cockpit>
       <model   type="int"> 2 </model>
     </rating>
 
@@ -45,9 +45,9 @@
         <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
         <x-offset-m archive="y"> -0.630 </x-offset-m> <!--Right-->
         <y-offset-m archive="y">  4.830 </y-offset-m> <!--Up-->
-        <z-offset-m archive="y"> -7.920 </z-offset-m> <!--Back-->
+        <z-offset-m archive="y"> -7.900 </z-offset-m> <!--Back-->
         <pitch-offset-deg> -15 </pitch-offset-deg>
-        <default-field-of-view-deg type="double"> 55 </default-field-of-view-deg>
+        <default-field-of-view-deg type="double"> 65 </default-field-of-view-deg>
       </config>
     </view>
 
@@ -94,6 +94,25 @@
     </view>
 
     <view n="100">
+      <name>Cargo Bay View</name>
+      <enabled type="bool" userarchive="y">true</enabled>
+      <type>lookfrom</type>
+      <internal type="bool">false</internal>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+        <default-pitch-deg type="double">0</default-pitch-deg>
+        <default-heading-deg type="double">0</default-heading-deg>
+        <dynamic-view type="bool">true</dynamic-view>
+        <x-offset-m archive="y"> 0.000 </x-offset-m> <!--Right-->
+        <y-offset-m archive="y">  2.830 </y-offset-m> <!--Up-->
+        <z-offset-m archive="y"> -3.920 </z-offset-m> <!--Back-->
+      </config>
+    </view>
+    
+    <view n="101">
       <name>Tail Camera View</name>
       <enabled type="bool" userarchive="y">true</enabled>
       <type>lookat</type>
@@ -139,11 +158,26 @@
         <float n="14" alias="/gear/gear[1]/rollspeed-ms" />
         <float n="15" alias="/gear/gear[2]/rollspeed-ms" />
         <float n="16" alias="/sim/model/door-positions/nose/position-norm"/>
+        <float n="17" alias="/sim/model/door-positions/rear/position-norm"/>
       </generic>
     </multiplay>  
 
   </sim>
 
+<controls>
+    <engines>
+        <engine n="0">
+          <boost type="bool">true</boost>
+        </engine>
+        <engine n="1">
+          <boost type="bool">true</boost>
+        </engine>
+      </engines>
+      <gear>
+        <brake-parking type="bool">true</brake-parking>
+        <tailwheel-lock type="bool">false</tailwheel-lock>        
+      </gear>
+</controls>
 
   <input>
 

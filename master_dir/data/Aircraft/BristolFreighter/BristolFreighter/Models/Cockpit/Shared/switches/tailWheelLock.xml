@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>switch.ac</path>
+
+  <animation>
+    <object-name>SwitchNut</object-name>
+    <object-name>Switch</object-name>
+  </animation>
+
+  <animation>
+    <object-name>Switch</object-name>
+    <type>rotate</type>
+    <property>controls/gear/tailwheel-lock</property>
+    <factor>36</factor>
+    <offset-deg>-18</offset-deg>
+    <axis>
+      <object-name>Switch_AXIS</object-name>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Switch</object-name>
+    <object-name>SwitchNut</object-name>
+    <object-name>SwitchPlate</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/tailwheel-lock</property>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>tailwheel lock: %s</label>
+        <measure-text>tailwheel lock: Off</measure-text>
+        <tooltip-id>tailWheelLock</tooltip-id>
+        <mapping>on-off</mapping>
+        <property>controls/gear/tailwheel-lock</property>
+      </binding>
+    </hovered>
+  </animation>
+
+</PropertyList>
+
